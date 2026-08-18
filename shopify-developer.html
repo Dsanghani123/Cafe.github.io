@@ -18,7 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('kinetic_theme');
             if (savedTheme) {
                 document.documentElement.setAttribute('data-theme', savedTheme);
@@ -47,7 +47,8 @@
             </ul>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme" title="Toggle Light/Dark Theme">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme"
+                    title="Toggle Light/Dark Theme">
                     <span class="theme-toggle-icon moon-icon">🌙</span>
                     <span class="theme-toggle-icon sun-icon">☀️</span>
                 </button>
@@ -81,8 +82,7 @@
                     <a href="#code-stack" class="btn btn-secondary">Inspect Code Quality</a>
                 </div>
 
-                <div
-                    style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; background: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div class="hero-stats-grid">
                     <div>
                         <h4 style="font-size: 1.6rem; color: var(--emerald-primary);">99/100</h4>
                         <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Lighthouse Speed
@@ -128,7 +128,7 @@
                     handwritten for maximum performance.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;">
+            <div class="services-grid">
                 <div
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
@@ -211,7 +211,7 @@
             </div>
 
             <div class="tabs-wrapper" style="max-width: 960px; margin: 0 auto;">
-                <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+                <div class="tabs-nav-scroll">
                     <button class="option-btn selected tab-btn"
                         data-tab="tab-liquid">product-recommendations.liquid</button>
                     <button class="option-btn tab-btn" data-tab="tab-js">cart-drawer-ajax.js</button>
@@ -250,7 +250,7 @@
                 </div>
 
                 <!-- Code Pane 2 -->
-                <div class="tab-pane" id="tab-js" style="display: none;">
+                <div class="tab-pane" id="tab-js">
                     <div class="code-window">
                         <div class="code-header">
                             <div class="window-dots">
@@ -281,7 +281,7 @@
                 </div>
 
                 <!-- Code Pane 3 -->
-                <div class="tab-pane" id="tab-graphql" style="display: none;">
+                <div class="tab-pane" id="tab-graphql">
                     <div class="code-window">
                         <div class="code-header">
                             <div class="window-dots">
@@ -437,6 +437,50 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="brand-logo"
+                        style="color: #FFF; margin-bottom: 16px; display: inline-flex;">
+                        KINETIC <span class="brand-badge">DUO STUDIO</span>
+                    </a>
+                    <p style="color: var(--text-on-dark-muted); font-size: 0.9rem; max-width: 320px;">
+                        Senior Shopify Development architecture focused on 95+ Core Web Vitals speed scores and custom
+                        Liquid themes.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Pages
+                    </h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shopify-developer.html">Shopify Developer</a></li>
+                        <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
+                        <li><a href="index.html#estimator">Scope Estimator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Services
+                    </h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+                        <li><a href="#services">Custom Liquid Themes</a></li>
+                        <li><a href="#services">95+ Speed Audit</a></li>
+                        <li><a href="#services">GA4 / GTM / Meta Pixel</a></li>
+                        <li><a href="#services">Shopify Store Setup</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Contact
+                    </h4>
+                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted);">Direct email:
+                        duo@kinetic-studio.com</p>
+                    <div style="margin-top: 12px; font-size: 0.85rem; color: var(--emerald-primary);">● Available for
+                        Store Builds</div>
+                </div>
+            </div>
+
             <div class="footer-bottom">
                 <div>© 2026 Senior Shopify Developer. Part of KINETIC Duo Studio.</div>
                 <div style="display: flex; gap: 20px;">

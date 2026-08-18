@@ -48,12 +48,24 @@ function initNavigation() {
       navLinks.classList.toggle('active');
       const isExpanded = navLinks.classList.contains('active');
       mobileToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      mobileToggle.textContent = isExpanded ? '✕' : '☰';
+    });
+
+    // Close menu when clicking link inside menu
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileToggle.textContent = '☰';
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-      if (!header.contains(e.target) && navLinks.classList.contains('active')) {
+      if (header && !header.contains(e.target) && navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
+        mobileToggle.textContent = '☰';
+        mobileToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -128,23 +140,25 @@ function initProjectEstimator() {
 
 /* 3. Contact Form Handler with Instant Feedback */
 function initFormHandler() {
-  const form = document.getElementById('studio-contact-form');
-  const successState = document.getElementById('form-success-message');
+  const forms = document.querySelectorAll('form');
 
-  if (form) {
+  forms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const submitBtn = form.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.innerHTML = `
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;">
             <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
           </svg>
           Sending...
         `;
         submitBtn.disabled = true;
       }
+
+      const parent = form.parentElement;
+      const successState = parent ? parent.querySelector('#form-success-message') : document.getElementById('form-success-message');
 
       setTimeout(() => {
         form.style.display = 'none';
@@ -154,7 +168,7 @@ function initFormHandler() {
         }
       }, 1000);
     });
-  }
+  });
 }
 
 /* 4. Tab Switchers for Developer Code Snippets & Portfolio Views */
