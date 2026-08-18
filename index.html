@@ -18,6 +18,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('kinetic_theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -26,19 +36,23 @@
     <header class="site-header">
         <div class="container nav-container">
             <a href="index.html" class="brand-logo">
-                Coirens <span class="brand-badge">DUO STUDIO</span>
+                KINETIC <span class="brand-badge">DUO STUDIO</span>
             </a>
 
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="shopify-developer.html">Shopify Developer</a></li>
                 <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
-                <li><a href="#joint-work">Joint Work</a></li>
-                <li><a href="#estimator">Estimator</a></li>
+                <li><a href="index.html#joint-work">Joint Work</a></li>
+                <li><a href="index.html#estimator">Estimator</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#contact" class="btn btn-primary btn-sm">Book Studio Call</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme" title="Toggle Light/Dark Theme">
+                    <span class="theme-toggle-icon moon-icon">🌙</span>
+                    <span class="theme-toggle-icon sun-icon">☀️</span>
+                </button>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book Studio Call</a>
                 <button class="mobile-toggle" aria-label="Toggle navigation menu">☰</button>
             </div>
         </div>
@@ -120,22 +134,22 @@
                 <div class="duo-card dev-card">
                     <div>
                         <div class="duo-card-header">
-                            <div class="avatar-circle dev-avatar">AV</div>
+                            <div class="avatar-circle dev-avatar">DEV</div>
                             <div class="duo-info">
-                                <h3>Alex Vance</h3>
+                                <h3>Lead Shopify Developer</h3>
                                 <div class="role-title">Senior Shopify Developer & Architect</div>
                             </div>
                         </div>
 
-                        <p>Specializes in high-performance Liquid theme development, headless Storefront API builds,
-                            custom checkout extensions, and 95+ Core Web Vitals speed optimization.</p>
+                        <p>Specializes in complete store setup, Shopify store redesigns, bespoke Liquid functionality,
+                            and GA4 / GTM / MS Clarity & Meta Pixel tracking setup.</p>
 
                         <div class="skill-tags">
-                            <span class="skill-tag">Shopify Liquid</span>
-                            <span class="skill-tag">Storefront API</span>
-                            <span class="skill-tag">JavaScript / ESNext</span>
-                            <span class="skill-tag">Checkout UI Extensions</span>
-                            <span class="skill-tag">Core Web Vitals</span>
+                            <span class="skill-tag">Complete Store Setup</span>
+                            <span class="skill-tag">Store Redesign</span>
+                            <span class="skill-tag">Custom Liquid & Cart</span>
+                            <span class="skill-tag">GA4 & GTM Tracking</span>
+                            <span class="skill-tag">MS Clarity & Meta Pixel</span>
                         </div>
                     </div>
 
@@ -150,22 +164,22 @@
                 <div class="duo-card design-card">
                     <div>
                         <div class="duo-card-header">
-                            <div class="avatar-circle design-avatar">ER</div>
+                            <div class="avatar-circle design-avatar">DES</div>
                             <div class="duo-info">
-                                <h3>Elena Rostova</h3>
+                                <h3>Lead UI/UX Designer</h3>
                                 <div class="role-title">Senior E-Commerce UI/UX Designer</div>
                             </div>
                         </div>
 
-                        <p>Focuses on revenue-generating UX design systems, conversion-centered product page layouts
-                            (PDPs), cart drawer upsell UI, and mobile-first DTC brand experiences.</p>
+                        <p>Focuses on revenue-generating Mobile App & Desktop Web UI/UX design, conversion-centered
+                            product page layouts (PDPs), cart drawer upsells, and Figma systems.</p>
 
                         <div class="skill-tags">
+                            <span class="skill-tag">Mobile App UI/UX</span>
+                            <span class="skill-tag">Desktop Web UX</span>
                             <span class="skill-tag">Figma Design Systems</span>
                             <span class="skill-tag">PDP UX Optimization</span>
-                            <span class="skill-tag">Cart Upsell UI</span>
-                            <span class="skill-tag">CRO Wireframing</span>
-                            <span class="skill-tag">Mobile DTC Layouts</span>
+                            <span class="skill-tag">Cart Drawer Upsells</span>
                         </div>
                     </div>
 
@@ -199,8 +213,10 @@
                         <div>
                             <span class="badge badge-emerald" style="margin-bottom: 16px;">Organic Skincare DTC</span>
                             <h3>AURA Botanical Skincare</h3>
-                            <p style="margin-top: 8px;">Complete brand redesign and custom Shopify build. Elena crafted
-                                an immersive PDP visual layout while Alex engineered a custom Liquid theme with zero
+                            <p style="margin-top: 8px;">Complete brand redesign and custom Shopify build. Our Lead
+                                Designer crafted
+                                an immersive PDP visual layout while our Lead Developer engineered a custom Liquid theme
+                                with zero
                                 third-party app bloat.</p>
 
                             <div class="case-metrics-row">
@@ -223,8 +239,8 @@
                             style="display: flex; gap: 12px; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
                             <span
                                 style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Collaborators:</span>
-                            <span class="badge badge-indigo">Elena (UI/UX)</span>
-                            <span class="badge badge-emerald">Alex (Dev)</span>
+                            <span class="badge badge-indigo">Lead Designer</span>
+                            <span class="badge badge-emerald">Lead Developer</span>
                         </div>
                     </div>
                 </div>
@@ -265,8 +281,8 @@
                             style="display: flex; gap: 12px; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
                             <span
                                 style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Collaborators:</span>
-                            <span class="badge badge-indigo">Elena (UI/UX)</span>
-                            <span class="badge badge-emerald">Alex (Dev)</span>
+                            <span class="badge badge-indigo">Lead Designer</span>
+                            <span class="badge badge-emerald">Lead Developer</span>
                         </div>
                     </div>
                 </div>
@@ -295,7 +311,7 @@
 
                 <div class="workflow-step-card">
                     <span class="step-number">02</span>
-                    <span class="step-owner owner-designer">Elena (UI/UX)</span>
+                    <span class="step-owner owner-designer">Lead Designer</span>
                     <h3>Figma Design System</h3>
                     <p>Creating modular design tokens, PDP wireframes, cart drawers, and interactive prototypes tailored
                         to your brand.</p>
@@ -303,7 +319,7 @@
 
                 <div class="workflow-step-card">
                     <span class="step-number">03</span>
-                    <span class="step-owner owner-dev">Alex (Developer)</span>
+                    <span class="step-owner owner-dev">Lead Developer</span>
                     <h3>Custom Liquid Build</h3>
                     <p>Transforming Figma files into clean, modular Shopify Liquid code with custom metafields and zero
                         app clutter.</p>
@@ -374,7 +390,7 @@
                                     & Shopify Build</span></li>
                             <li>✓ <strong style="color:#FFF;">Est. Timeline:</strong> <span id="estimated-timeline">3-4
                                     Weeks</span></li>
-                            <li>✓ Direct collaboration with both Alex & Elena</li>
+                            <li>✓ Direct collaboration with Lead Designer & Lead Developer</li>
                             <li>✓ 30 Days Post-Launch Support & QA Guarantee</li>
                         </ul>
                     </div>
@@ -398,7 +414,8 @@
                 <div class="testimonial-card">
                     <div>
                         <div class="quote-icon">“</div>
-                        <p style="font-style: italic; font-size: 0.95rem;">"Working with Alex and Elena was a breath of
+                        <p style="font-style: italic; font-size: 0.95rem;">"Working with the lead designer and lead
+                            developer was a breath of
                             fresh air. Having the designer and developer on the same call solved issues in minutes that
                             used to take weeks with our old agency. Our conversion rate rose by 42% in month one!"</p>
                     </div>
@@ -416,8 +433,8 @@
                     <div>
                         <div class="quote-icon">“</div>
                         <p style="font-style: italic; font-size: 0.95rem;">"Our Shopify store speed went from a laggy 38
-                            to a blazing 99 Lighthouse score while looking like a luxury fashion editorial. Elena's
-                            Figma designs were executed flawlessly by Alex."</p>
+                            to a blazing 99 Lighthouse score while looking like a luxury fashion editorial. The
+                            Figma designs were executed flawlessly into custom Liquid code."</p>
                     </div>
 
                     <div class="author-info">
@@ -489,12 +506,12 @@
                         style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 36px;">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+                            <input type="text" id="name" class="form-control" placeholder="e.g. Store Owner" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Work Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="sarah@yourbrand.com"
+                            <input type="email" id="email" class="form-control" placeholder="hello@yourbrand.com"
                                 required>
                         </div>
 
@@ -507,9 +524,10 @@
                             <label for="interest">Primary Goal</label>
                             <select id="interest" class="form-control"
                                 style="background: var(--bg-dark-card); color: white;">
-                                <option value="full">Full Store Design & Shopify Build</option>
-                                <option value="dev">Custom Shopify Development (Alex)</option>
-                                <option value="design">UI/UX Design & CRO Audit (Elena)</option>
+                                <option value="full">Complete Store Setup & Redesign</option>
+                                <option value="dev">Custom Functionality & Liquid Code</option>
+                                <option value="design">Mobile App & Desktop Web UI/UX Design</option>
+                                <option value="tracking">GA4, GTM, MS Clarity & Meta Tracking</option>
                                 <option value="speed">Speed & Core Web Vitals Optimization</option>
                             </select>
                         </div>
@@ -527,7 +545,7 @@
                     <div id="form-success-message"
                         style="display: none; background: #064E3B; border: 1px solid #10B981; border-radius: var(--radius-lg); padding: 40px; text-align: center; color: #ECFDF5;">
                         <h3 style="color: #FFF; margin-bottom: 12px;">Message Received!</h3>
-                        <p style="color: #A7F3D0;">Thank you! Both Alex and Elena have received your project details. We
+                        <p style="color: #A7F3D0;">Thank you! Our studio team has received your project details. We
                             will review your store and reply within 24 hours.</p>
                     </div>
                 </div>

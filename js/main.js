@@ -4,12 +4,28 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initNavigation();
   initProjectEstimator();
   initFormHandler();
   initTabSwitchers();
   initSmoothScroll();
 });
+
+/* 0. Light / Dark Theme Mode Handler */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('theme-toggle');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const activeTheme = document.documentElement.getAttribute('data-theme');
+      const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('kinetic_theme', nextTheme);
+    });
+  }
+}
 
 /* 1. Navigation Header & Mobile Menu */
 function initNavigation() {

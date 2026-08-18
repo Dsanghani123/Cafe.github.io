@@ -4,19 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elena Rostova — Senior E-Commerce UI/UX Designer & CRO Strategist</title>
+    <title>Senior E-Commerce UI/UX Designer & CRO Strategist — KINETIC Studio</title>
     <meta name="description"
-        content="Dedicated page for Elena Rostova, Senior E-Commerce UI/UX Designer. High-converting PDP layouts, Figma design systems, mobile cart drawer UX, and CRO audits.">
+        content="Dedicated page for Senior E-Commerce UI/UX Design. High-converting PDP layouts, Figma design systems, mobile cart drawer UX, and CRO audits.">
     <meta name="keywords"
         content="UI/UX Designer, E-commerce Design, Shopify UI UX, CRO Designer, Figma Design System, PDP UX Design, DTC Mobile UX">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Elena Rostova — Senior E-Commerce UI/UX Designer & CRO Strategist">
+    <meta property="og:title" content="Senior E-Commerce UI/UX Designer & CRO Strategist — KINETIC Studio">
     <meta property="og:description" content="Conversion-centered UI/UX design crafted for high-growth Shopify brands.">
     <meta property="og:type" content="website">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('kinetic_theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -32,19 +42,23 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shopify-developer.html">Shopify Developer</a></li>
                 <li><a href="ui-ux-designer.html" class="active">UI/UX Designer</a></li>
-                <li><a href="#specialties">Specialties</a></li>
-                <li><a href="#cro-teardown">CRO Teardown</a></li>
+                <li><a href="index.html#joint-work">Joint Work</a></li>
+                <li><a href="index.html#estimator">Estimator</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#designer-contact" class="btn btn-primary btn-sm">Request UX Tear-Down</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme" title="Toggle Light/Dark Theme">
+                    <span class="theme-toggle-icon moon-icon">🌙</span>
+                    <span class="theme-toggle-icon sun-icon">☀️</span>
+                </button>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book Studio Call</a>
                 <button class="mobile-toggle" aria-label="Toggle navigation menu">☰</button>
             </div>
         </div>
     </header>
 
     <!-- Designer Hero Section -->
-    <section class="hero-section" style="background: linear-gradient(180deg, #FAF9F5 0%, #EEF2FF 100%);">
+    <section class="hero-section hero-design">
         <div class="container hero-grid">
             <div class="hero-text-content">
                 <div class="hero-tag-row">
@@ -57,9 +71,10 @@
                 </h1>
 
                 <p class="lead">
-                    Hi, I'm <strong>Elena Rostova</strong>. I design high-converting e-commerce experiences—from custom
-                    Figma design systems and PDP product pages to mobile cart drawers that turn casual browsers into
-                    buyer brand advocates.
+                    Hi, I'm your <strong>Lead UI/UX Designer</strong>. I design high-converting digital product
+                    experiences across <strong>Mobile App (iOS & Android) and Desktop Web</strong>—from custom Figma
+                    design systems and PDP product pages to mobile cart drawers that turn casual browsers into buyer
+                    brand advocates.
                 </p>
 
                 <div class="hero-cta-group">
@@ -70,19 +85,19 @@
                 <div
                     style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; background: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
                     <div>
-                        <h4 style="font-size: 1.6rem; color: var(--indigo-primary);">+38%</h4>
+                        <h4 style="font-size: 1.6rem; color: var(--indigo-primary);">App & Web</h4>
+                        <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Cross-Platform
+                            UX</span>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.6rem; color: var(--text-main);">+38%</h4>
                         <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Avg Conversion
                             Lift</span>
                     </div>
                     <div>
-                        <h4 style="font-size: 1.6rem; color: var(--text-main);">100%</h4>
-                        <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Custom Figma
+                        <h4 style="font-size: 1.6rem; color: var(--emerald-primary);">100%</h4>
+                        <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Figma System
                             Tokens</span>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.6rem; color: var(--emerald-primary);">Mobile First</h4>
-                        <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Thumb-Zone
-                            Optimized</span>
                     </div>
                 </div>
             </div>
@@ -93,7 +108,7 @@
                     <div>
                         <div
                             style="font-size: 0.82rem; font-weight: 700; color: var(--indigo-primary); text-transform: uppercase;">
-                            CRO UX Principles</div>
+                            App & Desktop UX</div>
                         <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-main);">PDP & Cart
                             Conversion</div>
                     </div>
@@ -118,16 +133,16 @@
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
                         style="width: 48px; height: 48px; border-radius: 12px; background: var(--indigo-light); color: var(--indigo-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        🛍️</div>
-                    <h3>PDP (Product Detail Page) Conversion Design</h3>
-                    <p style="margin-top: 12px;">The PDP is where purchasing decisions happen. I design sticky buy
-                        containers, clear variant selectors, trust badges, social proof placements, and interactive
-                        ingredient/feature accordions.</p>
+                        📱</div>
+                    <h3>Mobile App UI/UX Design</h3>
+                    <p style="margin-top: 12px;">Native iOS and Android app UX layout and interaction design. Thumb-zone
+                        bottom navigation, touch-optimized user flows, fast onboarding screens, and interactive app
+                        prototypes in Figma.</p>
                     <ul
                         style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Mobile Sticky Add-To-Cart Bar</li>
-                        <li>✓ Dynamic Social Proof & Review Badges</li>
-                        <li>✓ Custom Subscription vs One-Time Purchase Toggle</li>
+                        <li>✓ iOS & Android Touch Navigation</li>
+                        <li>✓ Ergonomic Thumb-Zone Interaction</li>
+                        <li>✓ Mobile App Onboarding & Checkout Flow</li>
                     </ul>
                 </div>
 
@@ -135,16 +150,16 @@
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
                         style="width: 48px; height: 48px; border-radius: 12px; background: var(--emerald-light); color: var(--emerald-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        🛒</div>
-                    <h3>High-Converting Mobile Cart Drawers</h3>
-                    <p style="margin-top: 12px;">Transform your cart into a revenue engine. I design slide-out drawers
-                        equipped with free shipping progress bars, one-click product upsells, and instant checkout CTAs.
-                    </p>
+                        💻</div>
+                    <h3>Desktop Web UI/UX & PDP Architecture</h3>
+                    <p style="margin-top: 12px;">High-converting desktop storefronts and product detail pages (PDPs).
+                        Sticky buy containers, multi-column media galleries, rich feature accordions, and custom variant
+                        swatches.</p>
                     <ul
                         style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Dynamic Free Shipping & Gift Threshold Bar</li>
-                        <li>✓ One-Click Addon & Bundle Upsell Carousel</li>
-                        <li>✓ Frictionless Express Checkout Buttons</li>
+                        <li>✓ Desktop Sticky Buy Container & Swatches</li>
+                        <li>✓ Mega Menu & Editorial Filtering</li>
+                        <li>✓ High Contrast Visual Accessibility</li>
                     </ul>
                 </div>
 
@@ -152,16 +167,16 @@
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
                         style="width: 48px; height: 48px; border-radius: 12px; background: var(--amber-light); color: var(--amber-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        🎨</div>
-                    <h3>Modular Figma Design Systems</h3>
-                    <p style="margin-top: 12px;">Complete, scalable Figma UI component libraries with auto-layout v5,
-                        dark/light variants, typography tokens, and responsive mobile/desktop breakpoints for developer
-                        handoff.</p>
+                        🛒</div>
+                    <h3>High-Converting Cart Drawers & Upsell UI</h3>
+                    <p style="margin-top: 12px;">Transforming cart drawers into revenue drivers. Slide-out drawers
+                        equipped with free shipping progress bars, one-click product upsell carousels, and frictionless
+                        express checkout.</p>
                     <ul
                         style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Tokenized Color & Typography Styles</li>
-                        <li>✓ Interactive Figma Prototypes</li>
-                        <li>✓ Seamless Developer Spec Handoff</li>
+                        <li>✓ Dynamic Free Shipping Progress Bar</li>
+                        <li>✓ One-Click Addon & Bundle Upsell Carousel</li>
+                        <li>✓ Frictionless Express Checkout CTAs</li>
                     </ul>
                 </div>
 
@@ -169,16 +184,16 @@
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
                         style="width: 48px; height: 48px; border-radius: 12px; background: #F1F5F9; color: var(--text-main); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        📱</div>
-                    <h3>Mobile-First DTC Brand Experience</h3>
-                    <p style="margin-top: 12px;">Over 75% of DTC traffic is mobile. Every layout is engineered for
-                        natural thumb navigation, fast swipe image carousels, and zero layout shift on smaller
-                        viewports.</p>
+                        🎨</div>
+                    <h3>Modular Figma Design Systems</h3>
+                    <p style="margin-top: 12px;">Complete, scalable Figma UI component libraries with auto-layout v5,
+                        dark/light variants, design tokens, and responsive mobile/desktop breakpoints for developer
+                        handoff.</p>
                     <ul
                         style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Ergonomic Thumb-Zone Interaction</li>
-                        <li>✓ Fast Swipe Media & Video Galleries</li>
-                        <li>✓ High Contrast Visual Accessibility</li>
+                        <li>✓ Tokenized Color & Typography Styles</li>
+                        <li>✓ Interactive Figma Prototypes</li>
+                        <li>✓ Seamless Developer Spec Handoff</li>
                     </ul>
                 </div>
             </div>
@@ -217,7 +232,7 @@
                     <div class="comparison-card after">
                         <div
                             style="font-size: 0.85rem; font-weight: 800; color: var(--emerald-primary); text-transform: uppercase; margin-bottom: 12px;">
-                            ✓ Elena's CRO Optimized PDP (+38% Conv)</div>
+                            ✓ Custom CRO Optimized PDP (+38% Conv)</div>
                         <ul
                             style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.92rem; color: #065F46;">
                             <li>• Sticky mobile add-to-cart bar always accessible</li>
@@ -301,13 +316,13 @@
                         style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 36px;">
                         <div class="form-group">
                             <label for="des_name">Your Name</label>
-                            <input type="text" id="des_name" class="form-control" placeholder="e.g. Elena Rostova"
+                            <input type="text" id="des_name" class="form-control" placeholder="e.g. Store Owner"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="des_email">Work Email</label>
-                            <input type="email" id="des_email" class="form-control" placeholder="elena@yourbrand.com"
+                            <input type="email" id="des_email" class="form-control" placeholder="hello@yourbrand.com"
                                 required>
                         </div>
 
@@ -342,7 +357,8 @@
                     <div id="form-success-message"
                         style="display: none; background: #312E81; border: 1px solid #6366F1; border-radius: var(--radius-lg); padding: 40px; text-align: center; color: #E0E7FF;">
                         <h3 style="color: #FFF; margin-bottom: 12px;">UX Audit Request Received!</h3>
-                        <p style="color: #C7D2FE;">Elena will analyze your store's mobile UX and record your teardown
+                        <p style="color: #C7D2FE;">Our Lead Designer will analyze your store's mobile UX and record your
+                            teardown
                             within 24 hours.</p>
                     </div>
                 </div>
@@ -354,7 +370,7 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-bottom">
-                <div>© 2026 Elena Rostova — Senior E-Commerce UI/UX Designer. Part of KINETIC Duo Studio.</div>
+                <div>© 2026 Senior E-Commerce UI/UX Designer. Part of KINETIC Duo Studio.</div>
                 <div style="display: flex; gap: 20px;">
                     <a href="index.html">← Studio Home</a>
                     <a href="shopify-developer.html">Shopify Developer Page →</a>

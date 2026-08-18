@@ -4,19 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Vance — Senior Shopify Developer & E-Commerce Architect</title>
+    <title>Senior Shopify Developer & E-Commerce Architect — KINETIC Studio</title>
     <meta name="description"
-        content="Dedicated page for Alex Vance, Senior Shopify Developer. Custom Liquid themes, 95+ Core Web Vitals speed optimization, Storefront API, and custom checkout extensions.">
+        content="Dedicated page for Senior Shopify Development. Custom Liquid themes, 95+ Core Web Vitals speed optimization, Storefront API, and custom checkout extensions.">
     <meta name="keywords"
         content="Shopify Developer, Custom Liquid Theme, Core Web Vitals, Storefront API, Shopify Speed Optimization, Checkout Extensions">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Alex Vance — Senior Shopify Developer & E-Commerce Architect">
+    <meta property="og:title" content="Senior Shopify Developer & E-Commerce Architect — KINETIC Studio">
     <meta property="og:description" content="Custom Shopify Liquid code built for speed, scale, and zero app bloat.">
     <meta property="og:type" content="website">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('kinetic_theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -32,19 +42,23 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shopify-developer.html" class="active">Shopify Developer</a></li>
                 <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#code-stack">Code Stack</a></li>
+                <li><a href="index.html#joint-work">Joint Work</a></li>
+                <li><a href="index.html#estimator">Estimator</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#dev-contact" class="btn btn-emerald btn-sm">Book Tech Audit</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme" title="Toggle Light/Dark Theme">
+                    <span class="theme-toggle-icon moon-icon">🌙</span>
+                    <span class="theme-toggle-icon sun-icon">☀️</span>
+                </button>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book Studio Call</a>
                 <button class="mobile-toggle" aria-label="Toggle navigation menu">☰</button>
             </div>
         </div>
     </header>
 
     <!-- Developer Hero Section -->
-    <section class="hero-section" style="background: linear-gradient(180deg, #FAF9F5 0%, #F1F5F9 100%);">
+    <section class="hero-section hero-dev">
         <div class="container hero-grid">
             <div class="hero-text-content">
                 <div class="hero-tag-row">
@@ -57,7 +71,8 @@
                 </h1>
 
                 <p class="lead">
-                    Hi, I'm <strong>Alex Vance</strong>. I build featherweight, high-performance Shopify Liquid themes
+                    Hi, I'm your <strong>Lead Shopify Developer</strong>. I build featherweight, high-performance
+                    Shopify Liquid themes
                     and custom API architectures that load under 1 second and convert visitors into loyal customers.
                 </p>
 
@@ -118,16 +133,16 @@
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
                         style="width: 48px; height: 48px; border-radius: 12px; background: var(--emerald-light); color: var(--emerald-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        ⚡</div>
-                    <h3>Bespoke Liquid Theme Development</h3>
-                    <p style="margin-top: 12px;">Custom Shopify OS 2.0 themes built from scratch using clean Liquid
-                        templates. Fully editable by your marketing team with custom section blocks, JSON templates, and
-                        zero dependency overhead.</p>
+                        🏪</div>
+                    <h3>Complete Shopify Store Setup</h3>
+                    <p style="margin-top: 12px;">Full ground-up store builds from scratch. Configured with optimal
+                        settings, custom domain setup, payment gateways, collection hierarchies, navigation menus, and
+                        OS 2.0 architecture ready for sales launch.</p>
                     <ul
                         style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Modular JSON Section Schemas</li>
-                        <li>✓ Custom Metafields & Metaobjects Integration</li>
-                        <li>✓ Lightweight Vanilla JS Ajax Cart Drawer</li>
+                        <li>✓ Complete Domain & Gateway Configuration</li>
+                        <li>✓ Catalog & Collection Architecture</li>
+                        <li>✓ OS 2.0 Theme Installation & Setup</li>
                     </ul>
                 </div>
 
@@ -135,16 +150,16 @@
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
                         style="width: 48px; height: 48px; border-radius: 12px; background: var(--indigo-light); color: var(--indigo-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        🚀</div>
-                    <h3>Speed & Core Web Vitals Overhaul</h3>
-                    <p style="margin-top: 12px;">Drastically reduce page load times and improve Google rankings. I audit
-                        and eliminate render-blocking app scripts, implement custom lazy-loading, and optimize
-                        LCP/FID/CLS metrics.</p>
+                        🎨</div>
+                    <h3>Shopify Store Redesign</h3>
+                    <p style="margin-top: 12px;">Transform outdated or low-converting stores into high-end,
+                        high-performance DTC brand storefronts. Zero downtime during migration with full SEO structure
+                        preservation.</p>
                     <ul
                         style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Script Tag Deferral & App Minimization</li>
-                        <li>✓ Next-Gen Image & Video Optimization</li>
-                        <li>✓ Guaranteed 90+ Lighthouse Mobile Score</li>
+                        <li>✓ Legacy Theme to OS 2.0 Modernization</li>
+                        <li>✓ CRO & Mobile Navigation Revamp</li>
+                        <li>✓ SEO URL & Data Integrity Preservation</li>
                     </ul>
                 </div>
 
@@ -152,33 +167,33 @@
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
                         style="width: 48px; height: 48px; border-radius: 12px; background: var(--amber-light); color: var(--amber-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        🛠️</div>
-                    <h3>Checkout Extensions & Custom Apps</h3>
-                    <p style="margin-top: 12px;">Leveraging Shopify Plus Checkout UI Extensions and custom private
-                        Node/GraphQL apps to build seamless subscription portals, custom bundle builders, and dynamic
-                        checkout upsells.</p>
+                        ⚡</div>
+                    <h3>Bespoke Liquid & Custom Functionality</h3>
+                    <p style="margin-top: 12px;">Custom features engineered directly in Liquid without third-party app
+                        bloat: sticky buy bars, slide-out Ajax cart drawers with upsell carousels, bundle builders, and
+                        metafield templates.</p>
                     <ul
                         style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Checkout UI Extensions & Functions</li>
-                        <li>✓ Custom Bundle & Subscription Mechanics</li>
-                        <li>✓ Shopify GraphQL Admin API Integrations</li>
+                        <li>✓ Ajax Slide-Out Cart & Free Shipping Bar</li>
+                        <li>✓ Custom Metafields & Metaobjects Architecture</li>
+                        <li>✓ Sticky Add-to-Cart & Dynamic Section Blocks</li>
                     </ul>
                 </div>
 
                 <div
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
                     <div
-                        style="width: 48px; height: 48px; border-radius: 12px; background: #F1F5F9; color: var(--text-main); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        🔗</div>
-                    <h3>Headless Storefront API Builds</h3>
-                    <p style="margin-top: 12px;">For brands requiring ultra-bespoke frontend experiences, I build
-                        decoupled React / Next.js storefronts powered by Shopify's Storefront API and Hydrogen
-                        framework.</p>
+                        style="width: 48px; height: 48px; border-radius: 12px; background: #EEF2FF; color: var(--indigo-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
+                        📈</div>
+                    <h3>GA4, GTM, MS Clarity & Meta Tracking</h3>
+                    <p style="margin-top: 12px;">Full-suite conversion data tracking setup. Complete GA4 e-commerce
+                        dataLayer, GTM tag container management, Microsoft Clarity heatmaps/session recordings, and Meta
+                        Pixel + Conversions API (CAPI).</p>
                     <ul
                         style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Next.js & Remix / Hydrogen Storefronts</li>
-                        <li>✓ Edge CDN Caching & Sub-Second Loads</li>
-                        <li>✓ Seamless Shopify Cart & Checkout Sync</li>
+                        <li>✓ GA4 E-Commerce dataLayer Events</li>
+                        <li>✓ GTM Container & Custom Triggers</li>
+                        <li>✓ MS Clarity Session Heatmaps & Meta CAPI Sync</li>
                     </ul>
                 </div>
             </div>
@@ -332,8 +347,8 @@
 
                 <div
                     style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px;">
-                    <h4 style="color: var(--text-main); margin-bottom: 8px;">How do you work alongside Elena (the UI/UX
-                        Designer)?</h4>
+                    <h4 style="color: var(--text-main); margin-bottom: 8px;">How do you work alongside the Lead UI/UX
+                        Designer?</h4>
                     <p style="font-size: 0.95rem;">We collaborate during the initial Figma phase so that design files
                         match Shopify's native architecture. This eliminates re-work and ensures that every visual
                         component is engineered cleanly from day one.</p>
@@ -370,13 +385,13 @@
                         style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 36px;">
                         <div class="form-group">
                             <label for="dev_name">Your Name</label>
-                            <input type="text" id="dev_name" class="form-control" placeholder="e.g. Alex Smith"
+                            <input type="text" id="dev_name" class="form-control" placeholder="e.g. Store Owner"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="dev_email">Work Email</label>
-                            <input type="email" id="dev_email" class="form-control" placeholder="alex@yourbrand.com"
+                            <input type="email" id="dev_email" class="form-control" placeholder="hello@yourbrand.com"
                                 required>
                         </div>
 
@@ -410,7 +425,8 @@
                     <div id="form-success-message"
                         style="display: none; background: #064E3B; border: 1px solid #10B981; border-radius: var(--radius-lg); padding: 40px; text-align: center; color: #ECFDF5;">
                         <h3 style="color: #FFF; margin-bottom: 12px;">Audit Request Received!</h3>
-                        <p style="color: #A7F3D0;">Alex will run your store through performance diagnostics and contact
+                        <p style="color: #A7F3D0;">Our developer will run your store through performance diagnostics and
+                            contact
                             you within 24 hours.</p>
                     </div>
                 </div>
@@ -422,7 +438,7 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-bottom">
-                <div>© 2026 Alex Vance — Senior Shopify Developer. Part of KINETIC Duo Studio.</div>
+                <div>© 2026 Senior Shopify Developer. Part of KINETIC Duo Studio.</div>
                 <div style="display: flex; gap: 20px;">
                     <a href="index.html">← Studio Home</a>
                     <a href="ui-ux-designer.html">UI/UX Designer Page →</a>
