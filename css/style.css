@@ -498,6 +498,7 @@ html:not([data-theme="dark"]) .moon-icon {
 
 /* Hero Sections */
 .hero-section {
+
   padding: 160px 0 90px;
   position: relative;
 }
