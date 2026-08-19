@@ -18,7 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('kinetic_theme');
             if (savedTheme) {
                 document.documentElement.setAttribute('data-theme', savedTheme);
@@ -47,7 +47,8 @@
             </ul>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme" title="Toggle Light/Dark Theme">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme"
+                    title="Toggle Light/Dark Theme">
                     <span class="theme-toggle-icon moon-icon">🌙</span>
                     <span class="theme-toggle-icon sun-icon">☀️</span>
                 </button>
@@ -311,29 +312,29 @@
                 </div>
 
                 <div>
-                    <form id="studio-contact-form"
+                    <form id="uiux-contact-form" data-form-type="ui_ux"
                         style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 36px;">
                         <div class="form-group">
                             <label for="des_name">Your Name</label>
-                            <input type="text" id="des_name" class="form-control" placeholder="e.g. Store Owner"
-                                required>
+                            <input type="text" id="des_name" name="name" class="form-control"
+                                placeholder="e.g. Store Owner" required>
                         </div>
 
                         <div class="form-group">
                             <label for="des_email">Work Email</label>
-                            <input type="email" id="des_email" class="form-control" placeholder="hello@yourbrand.com"
-                                required>
+                            <input type="email" id="des_email" name="email" class="form-control"
+                                placeholder="hello@yourbrand.com" required>
                         </div>
 
                         <div class="form-group">
                             <label for="des_url">Current Website / Store Link</label>
-                            <input type="text" id="des_url" class="form-control" placeholder="https://yourbrand.com"
-                                required>
+                            <input type="text" id="des_url" name="store_url" class="form-control"
+                                placeholder="https://yourbrand.com">
                         </div>
 
                         <div class="form-group">
                             <label for="des_focus">Primary Design Goal</label>
-                            <select id="des_focus" class="form-control"
+                            <select id="des_focus" name="service" class="form-control"
                                 style="background: var(--bg-dark-card); color: white;">
                                 <option value="pdp">PDP Product Page Redesign</option>
                                 <option value="full-figma">Full Figma Brand Design System</option>
@@ -344,7 +345,7 @@
 
                         <div class="form-group">
                             <label for="des_notes">Design Pain Points</label>
-                            <textarea id="des_notes" class="form-control"
+                            <textarea id="des_notes" name="message" class="form-control"
                                 placeholder="Tell me about your current conversion rate or design challenges..."></textarea>
                         </div>
 
@@ -353,7 +354,7 @@
                             Video UX Audit →</button>
                     </form>
 
-                    <div id="form-success-message"
+                    <div id="uiux-form-success"
                         style="display: none; background: #312E81; border: 1px solid #6366F1; border-radius: var(--radius-lg); padding: 40px; text-align: center; color: #E0E7FF;">
                         <h3 style="color: #FFF; margin-bottom: 12px;">UX Audit Request Received!</h3>
                         <p style="color: #C7D2FE;">Our Lead Designer will analyze your store's mobile UX and record your
@@ -375,12 +376,14 @@
                         KINETIC <span class="brand-badge">DUO STUDIO</span>
                     </a>
                     <p style="color: var(--text-on-dark-muted); font-size: 0.9rem; max-width: 320px;">
-                        Senior E-Commerce UI/UX Design and CRO strategy crafting revenue-generating mobile app and desktop experiences.
+                        Senior E-Commerce UI/UX Design and CRO strategy crafting revenue-generating mobile app and
+                        desktop experiences.
                     </p>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Pages</h4>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Pages
+                    </h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="shopify-developer.html">Shopify Developer</a></li>
@@ -390,7 +393,8 @@
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Specialties</h4>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">
+                        Specialties</h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
                         <li><a href="#specialties">Mobile App UI/UX</a></li>
                         <li><a href="#specialties">Figma Design Systems</a></li>
@@ -400,9 +404,12 @@
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Contact</h4>
-                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted);">Direct email: duo@kinetic-studio.com</p>
-                    <div style="margin-top: 12px; font-size: 0.85rem; color: var(--indigo-primary);">● Available for UX Projects</div>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Contact
+                    </h4>
+                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted);">Direct email:
+                        duo@kinetic-studio.com</p>
+                    <div style="margin-top: 12px; font-size: 0.85rem; color: var(--indigo-primary);">● Available for UX
+                        Projects</div>
                 </div>
             </div>
 

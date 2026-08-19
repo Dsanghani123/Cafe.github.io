@@ -381,29 +381,29 @@
                 </div>
 
                 <div>
-                    <form id="studio-contact-form"
+                    <form id="developer-contact-form" data-form-type="developer"
                         style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 36px;">
                         <div class="form-group">
                             <label for="dev_name">Your Name</label>
-                            <input type="text" id="dev_name" class="form-control" placeholder="e.g. Store Owner"
-                                required>
+                            <input type="text" id="dev_name" name="name" class="form-control"
+                                placeholder="e.g. Store Owner" required>
                         </div>
 
                         <div class="form-group">
                             <label for="dev_email">Work Email</label>
-                            <input type="email" id="dev_email" class="form-control" placeholder="hello@yourbrand.com"
-                                required>
+                            <input type="email" id="dev_email" name="email" class="form-control"
+                                placeholder="hello@yourbrand.com" required>
                         </div>
 
                         <div class="form-group">
                             <label for="dev_store">Shopify Store URL</label>
-                            <input type="text" id="dev_store" class="form-control"
-                                placeholder="https://yourbrand.myshopify.com" required>
+                            <input type="text" id="dev_store" name="store_url" class="form-control"
+                                placeholder="https://yourbrand.myshopify.com">
                         </div>
 
                         <div class="form-group">
                             <label for="dev_service">Technical Requirement</label>
-                            <select id="dev_service" class="form-control"
+                            <select id="dev_service" name="service" class="form-control"
                                 style="background: var(--bg-dark-card); color: white;">
                                 <option value="speed">Speed & Core Web Vitals Optimization</option>
                                 <option value="custom-theme">New OS 2.0 Custom Theme Build</option>
@@ -414,7 +414,7 @@
 
                         <div class="form-group">
                             <label for="dev_notes">Code / Feature Requirements</label>
-                            <textarea id="dev_notes" class="form-control"
+                            <textarea id="dev_notes" name="message" class="form-control"
                                 placeholder="Describe the feature or performance issue you want solved..."></textarea>
                         </div>
 
@@ -422,7 +422,7 @@
                             →</button>
                     </form>
 
-                    <div id="form-success-message"
+                    <div id="developer-form-success"
                         style="display: none; background: #064E3B; border: 1px solid #10B981; border-radius: var(--radius-lg); padding: 40px; text-align: center; color: #ECFDF5;">
                         <h3 style="color: #FFF; margin-bottom: 12px;">Audit Request Received!</h3>
                         <p style="color: #A7F3D0;">Our developer will run your store through performance diagnostics and

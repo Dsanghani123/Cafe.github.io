@@ -138,16 +138,47 @@ function initProjectEstimator() {
   calculateEstimate();
 }
 
-/* 3. Contact Form Handler with Instant Feedback */
+/* 3. Unified Contact Form Handler with Google Apps Script Integration */
 function initFormHandler() {
+  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzLaA91SuoSHWoVgNxwSaeOim9Fcps0KmRtwVgt0J8ee87qoqru8bNe89vnMTAkSvA4pQ/exec';
   const forms = document.querySelectorAll('form');
 
   forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Remove any existing error banner
+      const existingError = form.querySelector('.form-error-message');
+      if (existingError) {
+        existingError.remove();
+      }
+
+      const formType = form.dataset.formType || 'studio_general';
+      let pageSource = window.location.pathname.split('/').pop();
+      if (!pageSource || pageSource.trim() === '') {
+        pageSource = 'index.html';
+      }
+
+      const formData = new FormData(form);
+      const payload = {
+        form_type: formType,
+        page_source: pageSource,
+        name: (formData.get('name') || '').toString().trim(),
+        email: (formData.get('email') || '').toString().trim(),
+        store_url: (formData.get('store_url') || '').toString().trim(),
+        service: (formData.get('service') || '').toString().trim(),
+        message: (formData.get('message') || '').toString().trim()
+      };
+
       const submitBtn = form.querySelector('button[type="submit"]');
+      let originalBtnContent = '';
       if (submitBtn) {
+        originalBtnContent = submitBtn.innerHTML;
         submitBtn.innerHTML = `
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;">
             <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
@@ -157,16 +188,49 @@ function initFormHandler() {
         submitBtn.disabled = true;
       }
 
-      const parent = form.parentElement;
-      const successState = parent ? parent.querySelector('#form-success-message') : document.getElementById('form-success-message');
+      try {
+        const response = await fetch(WEB_APP_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(payload)
+        });
 
-      setTimeout(() => {
-        form.style.display = 'none';
-        if (successState) {
-          successState.style.display = 'block';
-          successState.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
         }
-      }, 1000);
+
+        const result = await response.json();
+
+        if (result && (result.success === true || result.status === 'success' || result.result === 'success')) {
+          form.style.display = 'none';
+          const parent = form.parentElement;
+          const successState = parent
+            ? parent.querySelector('#studio-form-success, #developer-form-success, #uiux-form-success')
+            : document.querySelector('#studio-form-success, #developer-form-success, #uiux-form-success');
+
+          if (successState) {
+            successState.style.display = 'block';
+            successState.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
+      } catch (err) {
+        console.error('Lead submission failed:', err);
+
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+        }
+
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'form-error-message';
+        errorDiv.style.cssText = 'margin-top: 16px; padding: 14px 18px; background: #7F1D1D; border: 1px solid #EF4444; border-radius: var(--radius-md); color: #FEE2E2; font-size: 0.9rem; text-align: center;';
+        errorDiv.textContent = 'Something went wrong while sending your request. Please try again.';
+        form.appendChild(errorDiv);
+      }
     });
   });
 }

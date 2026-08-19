@@ -502,27 +502,27 @@
                 </div>
 
                 <div>
-                    <form id="studio-contact-form"
+                    <form id="studio-contact-form" data-form-type="studio_general"
                         style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 36px;">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="e.g. Store Owner" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Store Owner" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Work Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="hello@yourbrand.com"
+                            <input type="email" id="email" name="email" class="form-control" placeholder="hello@yourbrand.com"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="store_url">Current Store URL (if applicable)</label>
-                            <input type="text" id="store_url" class="form-control" placeholder="https://yourbrand.com">
+                            <input type="text" id="store_url" name="store_url" class="form-control" placeholder="https://yourbrand.com">
                         </div>
 
                         <div class="form-group">
                             <label for="interest">Primary Goal</label>
-                            <select id="interest" class="form-control"
+                            <select id="interest" name="service" class="form-control"
                                 style="background: var(--bg-dark-card); color: white;">
                                 <option value="full">Complete Store Setup & Redesign</option>
                                 <option value="dev">Custom Functionality & Liquid Code</option>
@@ -534,7 +534,7 @@
 
                         <div class="form-group">
                             <label for="message">Project Details & Timeline</label>
-                            <textarea id="message" class="form-control"
+                            <textarea id="message" name="message" class="form-control"
                                 placeholder="Tell us about your brand goals, current pain points, and target launch date..."></textarea>
                         </div>
 
@@ -542,7 +542,7 @@
                             Request →</button>
                     </form>
 
-                    <div id="form-success-message"
+                    <div id="studio-form-success"
                         style="display: none; background: #064E3B; border: 1px solid #10B981; border-radius: var(--radius-lg); padding: 40px; text-align: center; color: #ECFDF5;">
                         <h3 style="color: #FFF; margin-bottom: 12px;">Message Received!</h3>
                         <p style="color: #A7F3D0;">Thank you! Our studio team has received your project details. We
