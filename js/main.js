@@ -140,7 +140,7 @@ function initProjectEstimator() {
 
 /* 3. Unified Contact Form Handler with Google Apps Script Integration */
 function initFormHandler() {
-  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzLaA91SuoSHWoVgNxwSaeOim9Fcps0KmRtwVgt0J8ee87qoqru8bNe89vnMTAkSvA4pQ/exec';
+  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz2PF2Ac9TNqlpZq5SiK2QifUgrozC61oYiuTva2pG4GTqhDNGtyyELK0oiko6rj_E/exec';
   const forms = document.querySelectorAll('form');
 
   forms.forEach(form => {
