@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -32,10 +32,36 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shopify-developer.html">Shopify Developer</a></li>
-                <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#joint-work">Work</a></li>
+                <li class="nav-dropdown">
+                    <a href="about.html" class="nav-dropdown-toggle active">Company <span
+                            class="nav-dropdown-chevron">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html" class="dropdown-item active">About Us</a></li>
+                        <li><a href="about.html#team" class="dropdown-item">Careers <span
+                                    class="dropdown-item-badge">We're Hiring</span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="index.html#faq" class="nav-dropdown-toggle">Resources <span
+                            class="nav-dropdown-chevron">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#faq" class="dropdown-item">Blog & Insights</a></li>
+                        <li><a href="about.html#approach" class="dropdown-item">Engineering Standard</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="shopify-developer.html" class="nav-dropdown-toggle">Hire Talent <span
+                            class="nav-dropdown-chevron">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="shopify-developer.html" class="dropdown-item">Shopify Developer <span
+                                    class="dropdown-item-badge">Liquid</span></a></li>
+                        <li><a href="ui-ux-designer.html" class="dropdown-item">UI/UX Designer <span
+                                    class="dropdown-item-badge">Figma</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
 
             <div class="nav-actions">
@@ -110,11 +136,12 @@
 
                         <div style="display: flex; flex-direction: column; gap: 14px;">
                             <div
-                                style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center;">
+                                style="background: var(--bg-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center;">
                                 <div style="display: flex; align-items: center; gap: 12px;">
                                     <span style="font-size: 1.3rem;">🎨</span>
                                     <div>
-                                        <div style="font-weight: 700; font-size: 0.95rem; color: #FFF;">Conversion-First
+                                        <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-main);">
+                                            Conversion-First
                                             UI/UX</div>
                                         <div style="font-size: 0.8rem; color: var(--text-muted);">Figma • UX Strategy •
                                             User Flows</div>
@@ -124,11 +151,12 @@
                             </div>
 
                             <div
-                                style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center;">
+                                style="background: var(--bg-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center;">
                                 <div style="display: flex; align-items: center; gap: 12px;">
                                     <span style="font-size: 1.3rem;">⚡</span>
                                     <div>
-                                        <div style="font-weight: 700; font-size: 0.95rem; color: #FFF;">Bespoke Shopify
+                                        <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-main);">
+                                            Bespoke Shopify
                                             Development
                                         </div>
                                         <div style="font-size: 0.8rem; color: var(--text-muted);">Liquid • Shopify 2.0 •
@@ -139,11 +167,12 @@
                             </div>
 
                             <div
-                                style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center;">
+                                style="background: var(--bg-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center;">
                                 <div style="display: flex; align-items: center; gap: 12px;">
                                     <span style="font-size: 1.3rem;">📊</span>
                                     <div>
-                                        <div style="font-weight: 700; font-size: 0.95rem; color: #FFF;">CRO & Analytics
+                                        <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-main);">CRO
+                                            & Analytics
                                         </div>
                                         <div style="font-size: 0.8rem; color: var(--text-muted);">GA4 • GTM • Clarity •
                                             User Insights</div>
@@ -303,12 +332,13 @@
 
         <!-- 03. Our Approach / The Future for Commerce (Screenshot 2 Reference with Venn Diagram) -->
         <section id="approach" class="section"
-            style="background: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            style="background: var(--bg-subtle); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="approach-layout-grid">
                     <div class="approach-text-side">
                         <span class="script-accent">our approach</span>
-                        <h2 style="font-size: 2.3rem; margin-bottom: 24px; color: #FFFFFF;">The future for commerce</h2>
+                        <h2 style="font-size: 2.3rem; margin-bottom: 24px; color: var(--text-main);">The future for
+                            commerce</h2>
 
                         <p>
                             In the last three years consumer behavior, their pattern of product discovery and purchase
@@ -325,46 +355,49 @@
 
                         <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 12px;">
                             <div
-                                style="display: flex; align-items:start; gap: 10px; font-size: 0.95rem; color: #E2E8F0;">
-                                <span style="color: #10B981; font-weight: 800; font-size: 1.1rem;">✓</span>
+                                style="display: flex; align-items:start; gap: 10px; font-size: 0.95rem; color: var(--text-main);">
+                                <span
+                                    style="color: var(--emerald-primary); font-weight: 800; font-size: 1.1rem;">✓</span>
                                 <strong>Strategy:</strong> Data-driven CRO, customer journey mapping & drop-off audits.
                             </div>
                             <div
-                                style="display: flex; align-items: start; gap: 10px; font-size: 0.95rem; color: #E2E8F0;">
-                                <span style="color: #10B981; font-weight: 800; font-size: 1.1rem;">✓</span>
+                                style="display: flex; align-items: start; gap: 10px; font-size: 0.95rem; color: var(--text-main);">
+                                <span
+                                    style="color: var(--emerald-primary); font-weight: 800; font-size: 1.1rem;">✓</span>
                                 <strong>Technology:</strong> Clean Shopify Liquid, 95+ Core Web Vitals speed & GA4/GTM
                                 server tagging.
                             </div>
                             <div
-                                style="display: flex; align-items: start; gap: 10px; font-size: 0.95rem; color: #E2E8F0;">
-                                <span style="color: #10B981; font-weight: 800; font-size: 1.1rem;">✓</span>
+                                style="display: flex; align-items: start; gap: 10px; font-size: 0.95rem; color: var(--text-main);">
+                                <span
+                                    style="color: var(--emerald-primary); font-weight: 800; font-size: 1.1rem;">✓</span>
                                 <strong>Design:</strong> High-converting mobile UX, Figma design systems & frictionless
                                 checkout.
                             </div>
                         </div>
                     </div>
 
-                    <!-- Clean SVG Venn Diagram Matching Screenshot 2 -->
+                    <!-- Clean SVG Venn Diagram Matching Light Theme -->
                     <div class="venn-svg-wrapper">
                         <svg viewBox="0 0 500 450" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <!-- Top Circle: Strategy -->
-                            <circle cx="250" cy="160" r="120" stroke="#64748B" stroke-width="1.5"
-                                fill="rgba(30, 41, 59, 0.4)" />
-                            <text x="250" y="125" text-anchor="middle" fill="#FFFFFF"
+                            <circle cx="250" cy="160" r="120" stroke="#94A3B8" stroke-width="1.5"
+                                fill="rgba(241, 245, 249, 0.85)" />
+                            <text x="250" y="125" text-anchor="middle" fill="#0F172A"
                                 font-family="'Quicksand', sans-serif" font-size="14" font-weight="700"
                                 letter-spacing="1.5">STRATEGY</text>
 
                             <!-- Bottom Left Circle: Technology -->
-                            <circle cx="180" cy="275" r="120" stroke="#64748B" stroke-width="1.5"
-                                fill="rgba(30, 41, 59, 0.4)" />
-                            <text x="140" y="325" text-anchor="middle" fill="#FFFFFF"
+                            <circle cx="180" cy="275" r="120" stroke="#94A3B8" stroke-width="1.5"
+                                fill="rgba(241, 245, 249, 0.85)" />
+                            <text x="140" y="325" text-anchor="middle" fill="#0F172A"
                                 font-family="'Quicksand', sans-serif" font-size="14" font-weight="700"
                                 letter-spacing="1.5">TECHNOLOGY</text>
 
                             <!-- Bottom Right Circle: Marketing / Design -->
-                            <circle cx="320" cy="275" r="120" stroke="#64748B" stroke-width="1.5"
-                                fill="rgba(30, 41, 59, 0.4)" />
-                            <text x="365" y="325" text-anchor="middle" fill="#FFFFFF"
+                            <circle cx="320" cy="275" r="120" stroke="#94A3B8" stroke-width="1.5"
+                                fill="rgba(241, 245, 249, 0.85)" />
+                            <text x="365" y="325" text-anchor="middle" fill="#0F172A"
                                 font-family="'Quicksand', sans-serif" font-size="14" font-weight="700"
                                 letter-spacing="1.5">DESIGN & UX</text>
 
@@ -382,7 +415,7 @@
                             <!-- Script Label -->
                             <text x="425" y="65" text-anchor="middle" fill="#F59E0B" font-family="'Caveat', cursive"
                                 font-size="22" font-weight="700">We work on</text>
-                            <text x="425" y="90" text-anchor="middle" fill="#FFFFFF" font-family="'Caveat', cursive"
+                            <text x="425" y="90" text-anchor="middle" fill="#0F172A" font-family="'Caveat', cursive"
                                 font-size="24" font-weight="700">Your Success</text>
                         </svg>
                     </div>
@@ -441,12 +474,13 @@
 
         <!-- 05. People Behind Kinetic Duo (Screenshot 4 Reference) -->
         <section class="section"
-            style="background: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            style="background: var(--bg-subtle); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="team-story-grid">
                     <div class="team-story-text">
                         <span class="script-accent">The Team</span>
-                        <h2 style="font-size: 2.3rem; margin-bottom: 24px; color: #FFFFFF;">A Shopify Studio Built
+                        <h2 style="font-size: 2.3rem; margin-bottom: 24px; color: var(--text-main);">A Shopify Studio
+                            Built
                             Around Better Experiences.
                         </h2>
 
@@ -617,7 +651,7 @@
 
         <!-- 07. Explore Portfolios Section -->
         <section id="our-work" class="section"
-            style="background: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            style="background: var(--bg-subtle); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="script-accent">Selected Work</span>
@@ -689,9 +723,11 @@
         <section class="section">
             <div class="container">
                 <div class="editorial-quote-box text-center"
-                    style="padding: 64px 40px; border: 1px solid rgba(16, 185, 129, 0.4); background: linear-gradient(180deg, rgba(21, 29, 42, 0.9) 0%, rgba(6, 78, 59, 0.25) 100%);">
-                    <span class="script-accent" style="color: #6EE7B7; font-size: 2rem;">Let's build together</span>
-                    <h2 style="font-size: 2.4rem; color: #FFF; margin-bottom: 16px;">Build a Shopping Experience That
+                    style="padding: 64px 40px; border: 1px solid rgba(5, 150, 105, 0.25); background: linear-gradient(180deg, #FFFFFF 0%, #ECFDF5 100%); box-shadow: var(--shadow-sm); border-radius: var(--radius-lg);">
+                    <span class="script-accent" style="color: var(--emerald-primary); font-size: 2rem;">Let's build
+                        together</span>
+                    <h2 style="font-size: 2.4rem; color: var(--text-main); margin-bottom: 16px;">Build a Shopping
+                        Experience That
                         Converts.</h2>
                     <p style="max-width: 640px; margin: 0 auto 28px; color: var(--text-muted); font-size: 1.05rem;">
                         Let's discuss your brand's goals, speed requirements, and design roadmap directly on a free
@@ -712,11 +748,10 @@
             <div class="footer-grid">
                 <div>
                     <a href="index.html" class="brand-logo"
-                        style="color: #FFF; margin-bottom: 16px; display: inline-flex;">
+                        style="color: var(--text-main); margin-bottom: 16px; display: inline-flex;">
                         KINETIC <span class="brand-badge">DUO STUDIO</span>
                     </a>
-                    <p
-                        style="color: var(--text-on-dark-muted); font-size: 0.9rem; max-width: 320px; line-height: 1.65;">
+                    <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 320px; line-height: 1.65;">
                         A specialized 2-person e-commerce studio creating revenue-driven UI/UX design and ultra-fast
                         custom Shopify Liquid themes.
                     </p>
@@ -724,7 +759,7 @@
 
                 <div>
                     <h4
-                        style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">
+                        style="color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">
                         Pages</h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
                         <li><a href="index.html">Home</a></li>
@@ -736,7 +771,7 @@
 
                 <div>
                     <h4
-                        style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">
+                        style="color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">
                         Specialties</h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
                         <li><a href="shopify-developer.html#capabilities">Custom Liquid Themes</a></li>
@@ -748,11 +783,11 @@
 
                 <div>
                     <h4
-                        style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">
+                        style="color: var(--text-main); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">
                         Contact</h4>
-                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted); margin-bottom: 14px;">Direct line:
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">Direct line:
                         <a href="mailto:hello@kineticduo.com"
-                            style="color: #6EE7B7; text-decoration: underline;">hello@kineticduo.com</a>
+                            style="color: var(--emerald-primary); text-decoration: underline;">hello@kineticduo.com</a>
                     </p>
                     <a href="index.html#contact" class="btn btn-emerald btn-sm" style="width: 100%;">Book Studio Call
                         →</a>
@@ -764,11 +799,12 @@
             </div>
 
             <div class="footer-bottom">
-                <div>© 2026 KINETIC DUO STUDIO. All rights reserved. Hand-crafted for high-growth e-commerce.</div>
-                <div style="display: flex; gap: 20px;">
-                    <a href="shopify-developer.html">Developer Portfolio</a>
-                    <a href="ui-ux-designer.html">Designer Portfolio</a>
-                    <a href="about.html">About Us</a>
+                <div>© 2026 Kinetic Duo Studio. All rights reserved.</div>
+                <div style="display: flex; gap: 24px;">
+                    <a href="shopify-developer.html">Shopify Developer</a>
+                    <a href="ui-ux-designer.html">UI/UX Designer</a>
+                    <a href="about.html">About</a>
+                    <a href="index.html#contact">Contact</a>
                 </div>
             </div>
         </div>
