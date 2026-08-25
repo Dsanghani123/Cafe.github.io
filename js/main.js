@@ -172,7 +172,8 @@ function initFormHandler() {
         email: (formData.get('email') || '').toString().trim(),
         store_url: (formData.get('store_url') || '').toString().trim(),
         service: (formData.get('service') || '').toString().trim(),
-        message: (formData.get('message') || '').toString().trim()
+        message: (formData.get('message') || '').toString().trim(),
+        timestamp: new Date().toISOString()
       };
 
       const submitBtn = form.querySelector('button[type="submit"]');
@@ -180,7 +181,7 @@ function initFormHandler() {
       if (submitBtn) {
         originalBtnContent = submitBtn.innerHTML;
         submitBtn.innerHTML = `
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite; vertical-align: middle; margin-right: 6px;">
             <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
           </svg>
           Sending...
@@ -189,7 +190,8 @@ function initFormHandler() {
       }
 
       try {
-        const response = await fetch(WEB_APP_URL, {
+        // Send payload via text/plain to avoid pre-flight CORS issues with Google Apps Script
+        await fetch(WEB_APP_URL, {
           method: 'POST',
           headers: {
             'Content-Type': 'text/plain;charset=utf-8'
@@ -197,39 +199,56 @@ function initFormHandler() {
           body: JSON.stringify(payload)
         });
 
-        if (!response.ok) {
-          throw new Error(`HTTP error ${response.status}`);
+        // Hide form and display success block
+        form.style.display = 'none';
+        const parent = form.parentElement;
+        const successState = parent
+          ? parent.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success')
+          : document.querySelector('.form-success-state, #studio-form-success, #contact-success');
+
+        if (successState) {
+          successState.style.display = 'block';
+          successState.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
+      } catch (err) {
+        console.warn('Standard fetch caught, trying fallback submission:', err);
 
-        const result = await response.json();
+        try {
+          // Fallback: Send with mode no-cors
+          await fetch(WEB_APP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'text/plain;charset=utf-8'
+            },
+            body: JSON.stringify(payload)
+          });
 
-        if (result && (result.success === true || result.status === 'success' || result.result === 'success')) {
+          // Show success state
           form.style.display = 'none';
           const parent = form.parentElement;
           const successState = parent
-            ? parent.querySelector('#studio-form-success, #developer-form-success, #uiux-form-success')
-            : document.querySelector('#studio-form-success, #developer-form-success, #uiux-form-success');
+            ? parent.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success')
+            : document.querySelector('.form-success-state, #studio-form-success, #contact-success');
 
           if (successState) {
             successState.style.display = 'block';
             successState.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
-        } else {
-          throw new Error(result.message || 'Submission failed');
-        }
-      } catch (err) {
-        console.error('Lead submission failed:', err);
+        } catch (fallbackErr) {
+          console.error('Lead submission completely failed:', fallbackErr);
 
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnContent;
-        }
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnContent;
+          }
 
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'form-error-message';
-        errorDiv.style.cssText = 'margin-top: 16px; padding: 14px 18px; background: #7F1D1D; border: 1px solid #EF4444; border-radius: var(--radius-md); color: #FEE2E2; font-size: 0.9rem; text-align: center;';
-        errorDiv.textContent = 'Something went wrong while sending your request. Please try again.';
-        form.appendChild(errorDiv);
+          const errorDiv = document.createElement('div');
+          errorDiv.className = 'form-error-message';
+          errorDiv.style.cssText = 'margin-top: 16px; padding: 14px 18px; background: #7F1D1D; border: 1px solid #EF4444; border-radius: var(--radius-md); color: #FEE2E2; font-size: 0.9rem; text-align: center;';
+          errorDiv.textContent = 'Something went wrong while sending your request. Please email us directly at hello@kineticduo.com';
+          form.appendChild(errorDiv);
+        }
       }
     });
   });

@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Shopify Developer & E-Commerce Architect — KINETIC Studio</title>
+    <title>Shopify Development Agency | Custom Shopify Design & Development</title>
     <meta name="description"
-        content="Dedicated page for Senior Shopify Development. Custom Liquid themes, 95+ Core Web Vitals speed optimization, Storefront API, and custom checkout extensions.">
+        content="Kinetic Duo Studio builds fast, flexible and conversion-focused Shopify stores for D2C and eCommerce brands — from custom development and redesigns to migrations, integrations and performance optimization.">
     <meta name="keywords"
-        content="Shopify Developer, Custom Liquid Theme, Core Web Vitals, Storefront API, Shopify Speed Optimization, Checkout Extensions">
+        content="Shopify Development Agency, Shopify Development, Custom Shopify Development, Shopify Store Development, Shopify Store Redesign, Shopify Speed Optimization, Shopify Migration, Shopify Expert, Shopify UI/UX, Shopify eCommerce Development">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Senior Shopify Developer & E-Commerce Architect — KINETIC Studio">
-    <meta property="og:description" content="Custom Shopify Liquid code built for speed, scale, and zero app bloat.">
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Shopify Development Agency | Custom Shopify Design & Development">
+    <meta property="og:description"
+        content="Kinetic Duo Studio builds fast, flexible and conversion-focused Shopify stores for D2C and eCommerce brands.">
     <meta property="og:type" content="website">
 
-    <!-- CSS -->
+    <!-- CSS & JS -->
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('kinetic_theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            }
-        })();
-    </script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -43,391 +35,678 @@
                 <li><a href="shopify-developer.html" class="active">Shopify Developer</a></li>
                 <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
                 <li><a href="index.html#joint-work">Joint Work</a></li>
-                <li><a href="index.html#estimator">Estimator</a></li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme"
-                    title="Toggle Light/Dark Theme">
-                    <span class="theme-toggle-icon moon-icon">🌙</span>
-                    <span class="theme-toggle-icon sun-icon">☀️</span>
-                </button>
-                <a href="index.html#contact" class="btn btn-primary btn-sm">Book Studio Call</a>
+                <a href="#contact" class="btn btn-primary btn-sm">Book Studio Call</a>
                 <button class="mobile-toggle" aria-label="Toggle navigation menu">☰</button>
             </div>
         </div>
     </header>
 
-    <!-- Developer Hero Section -->
+    <!-- 01. HERO SECTION -->
     <section class="hero-section hero-dev">
         <div class="container hero-grid">
             <div class="hero-text-content">
                 <div class="hero-tag-row">
-                    <span class="badge badge-emerald">Senior Shopify Developer</span>
-                    <span class="badge badge-dark">8+ Years Engineering</span>
+                    <span class="badge badge-emerald">
+                        <span class="pulse-dot"></span> SHOPIFY DEVELOPMENT PARTNER
+                    </span>
                 </div>
 
                 <h1 class="hero-title">
-                    Clean, Custom Shopify Code Built for <span class="highlight">Speed & Scale</span>.
+                    Clean Shopify Development Built for <span class="highlight">Speed, Scale & Growth</span>.
                 </h1>
 
                 <p class="lead">
-                    Hi, I'm your <strong>Lead Shopify Developer</strong>. I build featherweight, high-performance
-                    Shopify Liquid themes
-                    and custom API architectures that load under 1 second and convert visitors into loyal customers.
+                    We build custom Shopify experiences that are fast, flexible and built around your business. From
+                    complete store builds and custom themes to advanced functionality and performance optimization, our
+                    developers turn thoughtful designs into reliable Shopify experiences.
                 </p>
 
                 <div class="hero-cta-group">
-                    <a href="#services" class="btn btn-primary">Technical Capabilities</a>
-                    <a href="#code-stack" class="btn btn-secondary">Inspect Code Quality</a>
+                    <a href="#contact" class="btn btn-emerald">Start a Shopify Project →</a>
+                    <a href="#capabilities" class="btn btn-secondary">Explore Our Capabilities</a>
                 </div>
 
+                <!-- Trust Metrics Strip -->
                 <div class="hero-stats-grid">
-                    <div>
-                        <h4 style="font-size: 1.6rem; color: var(--emerald-primary);">99/100</h4>
-                        <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Lighthouse Speed
-                            Avg</span>
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <span class="stat-label">D2C & eCommerce Projects</span>
                     </div>
-                    <div>
-                        <h4 style="font-size: 1.6rem; color: var(--text-main);">&lt;0.8s</h4>
-                        <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Time To
-                            Interactive</span>
+                    <div class="stat-item">
+                        <div class="stat-number">98+</div>
+                        <span class="stat-label">Performance-Focused Builds</span>
                     </div>
-                    <div>
-                        <h4 style="font-size: 1.6rem; color: var(--indigo-primary);">0%</h4>
-                        <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Bloated App
-                            Scripts</span>
+                    <div class="stat-item">
+                        <div class="stat-number">12+</div>
+                        <span class="stat-label">Years of Shopify & eCommerce Experience</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-image-wrapper">
                 <img src="images/project_dev_speed_dashboard.jpg"
-                    alt="Shopify Developer Performance Dashboard and Liquid Code Editor">
+                    alt="Shopify Development Dashboard and Liquid Code Architecture">
                 <div class="hero-floating-card">
                     <div>
                         <div
                             style="font-size: 0.82rem; font-weight: 700; color: var(--emerald-primary); text-transform: uppercase;">
-                            Core Web Vitals Guarantee</div>
-                        <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-main);">Green Lighthouse
-                            Scores</div>
+                            Core Web Vitals Optimized</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-main);">Fast & Scalable
+                            Shopify Stores</div>
                     </div>
-                    <span class="badge badge-emerald">95+ Performance</span>
+                    <span class="badge badge-emerald">98+ Performance</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Developer Services Section -->
-    <section class="case-studies-section" id="services">
+    <!-- 02. SHOPIFY ENGINEERING CAPABILITIES -->
+    <section class="case-studies-section" id="capabilities">
         <div class="container">
             <div class="section-header">
-                <span class="badge badge-emerald">Engineering Capabilities</span>
-                <h2 style="margin-top: 12px;">What I Build For Your Store</h2>
-                <p>From ground-up Online Store 2.0 themes to custom checkout extensions, every line of code is
-                    handwritten for maximum performance.</p>
+                <span class="badge badge-emerald">SHOPIFY CAPABILITIES</span>
+                <h2 style="margin-top: 12px;">What We Build for Your Shopify Store</h2>
+                <p>From ground-up Shopify builds to focused technical improvements, we combine clean development with
+                    practical eCommerce thinking to create stores that are easier to manage, faster to use and ready to
+                    scale.</p>
+            </div>
+
+            <div class="duo-grid">
+                <!-- CARD 01 -->
+                <div class="duo-card">
+                    <div>
+                        <div style="margin-bottom: 20px;">
+                            <span class="badge badge-emerald">STORE LAUNCH</span>
+                        </div>
+                        <h3 style="font-size: 1.55rem; font-weight: 700; margin-bottom: 14px;">Complete Shopify Store
+                            Setup</h3>
+                        <p
+                            style="font-size: 0.98rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 24px;">
+                            Launch a complete Shopify storefront with the right foundation from day one — including
+                            theme setup, navigation, collections, product structure, apps and essential store
+                            configuration.
+                        </p>
+
+                        <div class="feature-pill-list">
+                            <span class="feature-pill">✓ Shopify Store Setup</span>
+                            <span class="feature-pill">✓ Theme Configuration</span>
+                            <span class="feature-pill">✓ Navigation & Collection Setup</span>
+                            <span class="feature-pill">✓ Product & Store Structure</span>
+                            <span class="feature-pill">✓ Essential App Configuration</span>
+                            <span class="feature-pill">✓ Shopify 2.0 Setup</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <a href="#contact" class="btn btn-dark"
+                            style="width: 100%; border-radius: var(--radius-full); padding: 14px 28px; justify-content: center; font-size: 0.95rem;">Explore
+                            Store Development →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 02 -->
+                <div class="duo-card">
+                    <div>
+                        <div style="margin-bottom: 20px;">
+                            <span class="badge badge-emerald">STORE REDESIGN</span>
+                        </div>
+                        <h3 style="font-size: 1.55rem; font-weight: 700; margin-bottom: 14px;">Shopify Store Redesign
+                        </h3>
+                        <p
+                            style="font-size: 0.98rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 24px;">
+                            Turn an outdated or underperforming storefront into a modern, intuitive shopping experience
+                            without losing the functionality your business already depends on.
+                        </p>
+
+                        <div class="feature-pill-list">
+                            <span class="feature-pill">✓ Shopify 2.0 Redesign</span>
+                            <span class="feature-pill">✓ Mobile-First Experience</span>
+                            <span class="feature-pill">✓ Navigation Improvements</span>
+                            <span class="feature-pill">✓ UX-Focused Store Structure</span>
+                            <span class="feature-pill">✓ Existing Store Migration Support</span>
+                            <span class="feature-pill">✓ Performance-Conscious Development</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <a href="#contact" class="btn btn-dark"
+                            style="width: 100%; border-radius: var(--radius-full); padding: 14px 28px; justify-content: center; font-size: 0.95rem;">Redesign
+                            Your Store →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 03 -->
+                <div class="duo-card">
+                    <div>
+                        <div style="margin-bottom: 20px;">
+                            <span class="badge badge-emerald">CUSTOM ENGINEERING</span>
+                        </div>
+                        <h3 style="font-size: 1.55rem; font-weight: 700; margin-bottom: 14px;">Custom Shopify
+                            Development</h3>
+                        <p
+                            style="font-size: 0.98rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 24px;">
+                            Build functionality that goes beyond standard themes and apps. We develop custom Shopify
+                            features that fit your specific business requirements and customer journey.
+                        </p>
+
+                        <div class="feature-pill-list">
+                            <span class="feature-pill">✓ Custom Shopify Sections</span>
+                            <span class="feature-pill">✓ Custom Theme Features</span>
+                            <span class="feature-pill">✓ Liquid Development</span>
+                            <span class="feature-pill">✓ Dynamic Storefront Components</span>
+                            <span class="feature-pill">✓ Custom Templates</span>
+                            <span class="feature-pill">✓ Shopify API Integrations</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <a href="#contact" class="btn btn-dark"
+                            style="width: 100%; border-radius: var(--radius-full); padding: 14px 28px; justify-content: center; font-size: 0.95rem;">Discuss
+                            Custom Development →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 04 -->
+                <div class="duo-card">
+                    <div>
+                        <div style="margin-bottom: 20px;">
+                            <span class="badge badge-emerald">DATA & ANALYTICS</span>
+                        </div>
+                        <h3 style="font-size: 1.55rem; font-weight: 700; margin-bottom: 14px;">Tracking & Analytics
+                            Setup</h3>
+                        <p
+                            style="font-size: 0.98rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 24px;">
+                            Get a reliable view of how customers interact with your store. We implement essential
+                            tracking so your team can make better decisions from real user behavior and store data.
+                        </p>
+
+                        <div class="feature-pill-list">
+                            <span class="feature-pill">✓ Google Analytics 4</span>
+                            <span class="feature-pill">✓ Google Tag Manager</span>
+                            <span class="feature-pill">✓ Meta Pixel</span>
+                            <span class="feature-pill">✓ Microsoft Clarity</span>
+                            <span class="feature-pill">✓ Conversion Event Tracking</span>
+                            <span class="feature-pill">✓ Custom Tracking Requirements</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <a href="#contact" class="btn btn-dark"
+                            style="width: 100%; border-radius: var(--radius-full); padding: 14px 28px; justify-content: center; font-size: 0.95rem;">Improve
+                            Store Tracking →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. CUSTOM SHOPIFY DEVELOPMENT -->
+    <section class="services-section" id="custom-dev">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-navy">CUSTOM DEVELOPMENT</span>
+                <h2 style="margin-top: 12px;">When Standard Shopify Isn't Enough.</h2>
+                <p>Your business shouldn't have to change its processes just because a theme or app can't support them.
+                    We build custom Shopify functionality around your requirements — while keeping the storefront
+                    maintainable, responsive and performance-conscious.</p>
             </div>
 
             <div class="services-grid">
-                <div
-                    style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
-                    <div
-                        style="width: 48px; height: 48px; border-radius: 12px; background: var(--emerald-light); color: var(--emerald-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        🏪</div>
-                    <h3>Complete Shopify Store Setup</h3>
-                    <p style="margin-top: 12px;">Full ground-up store builds from scratch. Configured with optimal
-                        settings, custom domain setup, payment gateways, collection hierarchies, navigation menus, and
-                        OS 2.0 architecture ready for sales launch.</p>
-                    <ul
-                        style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Complete Domain & Gateway Configuration</li>
-                        <li>✓ Catalog & Collection Architecture</li>
-                        <li>✓ OS 2.0 Theme Installation & Setup</li>
-                    </ul>
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">01</div>
+                        <h3>Custom Liquid Development</h3>
+                        <p>Build tailored storefront experiences using clean, reusable Liquid code.</p>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More →</a>
                 </div>
 
-                <div
-                    style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
-                    <div
-                        style="width: 48px; height: 48px; border-radius: 12px; background: var(--indigo-light); color: var(--indigo-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        🎨</div>
-                    <h3>Shopify Store Redesign</h3>
-                    <p style="margin-top: 12px;">Transform outdated or low-converting stores into high-end,
-                        high-performance DTC brand storefronts. Zero downtime during migration with full SEO structure
-                        preservation.</p>
-                    <ul
-                        style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Legacy Theme to OS 2.0 Modernization</li>
-                        <li>✓ CRO & Mobile Navigation Revamp</li>
-                        <li>✓ SEO URL & Data Integrity Preservation</li>
-                    </ul>
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">02</div>
+                        <h3>Custom Sections & Blocks</h3>
+                        <p>Create flexible sections that your team can easily manage through Shopify's theme editor.</p>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More →</a>
                 </div>
 
-                <div
-                    style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
-                    <div
-                        style="width: 48px; height: 48px; border-radius: 12px; background: var(--amber-light); color: var(--amber-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        ⚡</div>
-                    <h3>Bespoke Liquid & Custom Functionality</h3>
-                    <p style="margin-top: 12px;">Custom features engineered directly in Liquid without third-party app
-                        bloat: sticky buy bars, slide-out Ajax cart drawers with upsell carousels, bundle builders, and
-                        metafield templates.</p>
-                    <ul
-                        style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ Ajax Slide-Out Cart & Free Shipping Bar</li>
-                        <li>✓ Custom Metafields & Metaobjects Architecture</li>
-                        <li>✓ Sticky Add-to-Cart & Dynamic Section Blocks</li>
-                    </ul>
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">03</div>
+                        <h3>Advanced Storefront Features</h3>
+                        <p>Develop product discovery, merchandising, promotional and shopping experiences beyond
+                            standard theme capabilities.</p>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More →</a>
                 </div>
 
-                <div
-                    style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
-                    <div
-                        style="width: 48px; height: 48px; border-radius: 12px; background: #EEF2FF; color: var(--indigo-primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">
-                        📈</div>
-                    <h3>GA4, GTM, MS Clarity & Meta Tracking</h3>
-                    <p style="margin-top: 12px;">Full-suite conversion data tracking setup. Complete GA4 e-commerce
-                        dataLayer, GTM tag container management, Microsoft Clarity heatmaps/session recordings, and Meta
-                        Pixel + Conversions API (CAPI).</p>
-                    <ul
-                        style="margin-top: 16px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
-                        <li>✓ GA4 E-Commerce dataLayer Events</li>
-                        <li>✓ GTM Container & Custom Triggers</li>
-                        <li>✓ MS Clarity Session Heatmaps & Meta CAPI Sync</li>
-                    </ul>
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">04</div>
+                        <h3>Third-Party Integrations</h3>
+                        <p>Connect your Shopify store with the tools and platforms your business relies on.</p>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More →</a>
                 </div>
+
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">05</div>
+                        <h3>Shopify APIs</h3>
+                        <p>Build custom integrations and workflows using Shopify's available APIs and ecosystem.</p>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">06</div>
+                        <h3>Headless & Advanced Experiences</h3>
+                        <p>For businesses with more complex requirements, explore advanced Shopify storefront
+                            architectures where appropriate.</p>
+                    </div>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="#contact" class="btn btn-emerald">Discuss Your Technical Requirement →</a>
             </div>
         </div>
     </section>
 
-    <!-- Code Stack & Architecture Showcase -->
-    <section style="padding: 90px 0; background: var(--bg-dark); color: var(--text-on-dark);" id="code-stack">
+    <!-- 04. ENGINEERING QUALITY SECTION -->
+    <section class="workflow-section" id="code-quality">
         <div class="container">
             <div class="section-header">
-                <span class="badge badge-dark">Clean Code Standard</span>
-                <h2 style="margin-top: 12px; color: var(--text-on-dark);">Engineering Quality Inspection</h2>
-                <p style="color: var(--text-on-dark-muted);">I write clean, modular Liquid and JavaScript without
-                    bloated frameworks. Take a look at sample production-grade code architecture below.</p>
+                <span class="badge badge-dark">CLEAN CODE STANDARD</span>
+                <h2 style="margin-top: 12px;">Engineering That Doesn't Compromise the Experience.</h2>
+                <p>A beautiful storefront means little if the code behind it is slow, fragile or difficult to maintain.
+                    We focus on clean implementation, performance and long-term maintainability from the start.</p>
             </div>
 
-            <div class="tabs-wrapper" style="max-width: 960px; margin: 0 auto;">
-                <div class="tabs-nav-scroll">
-                    <button class="option-btn selected tab-btn"
-                        data-tab="tab-liquid">product-recommendations.liquid</button>
-                    <button class="option-btn tab-btn" data-tab="tab-js">cart-drawer-ajax.js</button>
-                    <button class="option-btn tab-btn" data-tab="tab-graphql">checkout-upsell.graphql</button>
-                </div>
-
-                <!-- Code Pane 1 -->
-                <div class="tab-pane active" id="tab-liquid">
-                    <div class="code-window">
-                        <div class="code-header">
-                            <div class="window-dots">
-                                <div class="dot dot-red"></div>
-                                <div class="dot dot-yellow"></div>
-                                <div class="dot dot-green"></div>
-                            </div>
-                            <div class="file-name">sections/product-recommendations.liquid</div>
-                        </div>
-                        <pre class="code-content"><code><span class="code-comment">{% comment %} Bespoke Fast Ajax Recommendations - Zero Third-Party App Scripts {% endcomment %}</span>
-<span class="code-keyword">{% schema %}</span>
+            <div class="quality-grid">
+                <!-- Technical / Code Visual Mockup -->
+                <div class="code-mockup-window">
+                    <div class="code-window-header">
+                        <span class="code-window-dot" style="background: #EF4444;"></span>
+                        <span class="code-window-dot" style="background: #F59E0B;"></span>
+                        <span class="code-window-dot" style="background: #10B981;"></span>
+                        <span
+                            style="font-size: 0.75rem; color: #94A3B8; margin-left: 12px;">sections/featured-product.liquid</span>
+                    </div>
+                    <div class="code-mockup-body">
+                        <pre
+                            style="margin: 0; font-family: inherit;"><code><span style="color: #6EE7B7;">{%</span> <span style="color: #F472B6;">schema</span> <span style="color: #6EE7B7;">%}</span>
 {
-  "name": "Custom Dynamic Recommendations",
-  "settings": [
-    { "type": "text", "id": "heading", "label": "Heading", "default": "You Might Also Like" },
-    { "type": "range", "id": "products_to_show", "min": 2, "max": 6, "step": 1, "default": 4 }
+  <span style="color: #38BDF8;">"name"</span>: <span style="color: #FDE047;">"Bespoke Product PDP"</span>,
+  <span style="color: #38BDF8;">"tag"</span>: <span style="color: #FDE047;">"section"</span>,
+  <span style="color: #38BDF8;">"class"</span>: <span style="color: #FDE047;">"section-pdp-optimized"</span>,
+  <span style="color: #38BDF8;">"settings"</span>: [
+    {
+      <span style="color: #38BDF8;">"type"</span>: <span style="color: #FDE047;">"product"</span>,
+      <span style="color: #38BDF8;">"id"</span>: <span style="color: #FDE047;">"featured_item"</span>,
+      <span style="color: #38BDF8;">"label"</span>: <span style="color: #FDE047;">"Product"</span>
+    }
+  ],
+  <span style="color: #38BDF8;">"blocks"</span>: [
+    { <span style="color: #38BDF8;">"type"</span>: <span style="color: #FDE047;">"variant_picker"</span> },
+    { <span style="color: #38BDF8;">"type"</span>: <span style="color: #FDE047;">"instant_checkout_drawer"</span> }
   ]
 }
-<span class="code-keyword">{% endschema %}</span>
-
-&lt;section class="recommendations-container" data-product-id="<span class="code-string">{{ product.id }}</span>" data-limit="<span class="code-string">{{ section.settings.products_to_show }}</span>"&gt;
-  &lt;h3 class="section-title"&gt;<span class="code-string">{{ section.settings.heading | escape }}</span>&lt;/h3&gt;
-  &lt;div class="recommendations-grid" id="recommendations-output"&gt;
-    <span class="code-comment">&lt;!-- Dynamically hydrated via fetch API with skeleton loader --&gt;</span>
-  &lt;/div&gt;
-&lt;/section&gt;</code></pre>
+<span style="color: #6EE7B7;">{%</span> <span style="color: #F472B6;">endschema</span> <span style="color: #6EE7B7;">%}</span></code></pre>
                     </div>
                 </div>
 
-                <!-- Code Pane 2 -->
-                <div class="tab-pane" id="tab-js">
-                    <div class="code-window">
-                        <div class="code-header">
-                            <div class="window-dots">
-                                <div class="dot dot-red"></div>
-                                <div class="dot dot-yellow"></div>
-                                <div class="dot dot-green"></div>
-                            </div>
-                            <div class="file-name">assets/cart-drawer-ajax.js</div>
-                        </div>
-                        <pre class="code-content"><code><span class="code-comment">// High-performance Vanilla JS Cart Drawer API Sync</span>
-<span class="code-keyword">class</span> <span class="code-function">ShopifyCartDrawer</span> {
-  <span class="code-function">constructor</span>() {
-    <span class="code-keyword">this</span>.drawer = document.querySelector(<span class="code-string">'#cart-drawer-root'</span>);
-    <span class="code-keyword">this</span>.bindEvents();
-  }
-
-  <span class="code-keyword">async</span> <span class="code-function">addItem</span>(variantId, quantity = 1, properties = {}) {
-    <span class="code-keyword">const</span> response = <span class="code-keyword">await</span> fetch(<span class="code-string">'/cart/add.js'</span>, {
-      method: <span class="code-string">'POST'</span>,
-      headers: { <span class="code-string">'Content-Type'</span>: <span class="code-string">'application/json'</span> },
-      body: JSON.stringify({ items: [{ id: variantId, quantity, properties }] })
-    });
-    <span class="code-keyword">const</span> cartData = <span class="code-keyword">await</span> response.json();
-    <span class="code-keyword">this</span>.<span class="code-function">updateDrawerUI</span>(cartData);
-  }
-}</code></pre>
+                <!-- 4 Quality Principles -->
+                <div class="quality-principles-list">
+                    <div class="quality-principle-item">
+                        <span class="principle-tag">01 — PERFORMANCE</span>
+                        <div class="principle-title">Built with performance in mind</div>
+                        <p class="principle-desc">We minimize unnecessary code, optimize storefront assets and build
+                            experiences with speed and usability in mind.</p>
                     </div>
-                </div>
 
-                <!-- Code Pane 3 -->
-                <div class="tab-pane" id="tab-graphql">
-                    <div class="code-window">
-                        <div class="code-header">
-                            <div class="window-dots">
-                                <div class="dot dot-red"></div>
-                                <div class="dot dot-yellow"></div>
-                                <div class="dot dot-green"></div>
-                            </div>
-                            <div class="file-name">api/checkout-upsell.graphql</div>
-                        </div>
-                        <pre class="code-content"><code><span class="code-comment"># Shopify Storefront API GraphQL Query for Real-Time Inventory & Addons</span>
-<span class="code-keyword">query</span> <span class="code-function">GetCartRecommendations</span>($cartId: ID!) {
-  cart(id: $cartId) {
-    id
-    totalQuantity
-    cost {
-      subtotalAmount { amount currencyCode }
-    }
-    lines(first: 10) {
-      edges {
-        node {
-          merchandise {
-            ... on ProductVariant { id title price { amount } }
-          }
-        }
-      }
-    }
-  }
-}</code></pre>
+                    <div class="quality-principle-item">
+                        <span class="principle-tag">02 — SCALABILITY</span>
+                        <div class="principle-title">Built for your next stage</div>
+                        <p class="principle-desc">Your store should be able to evolve as your catalog, customers and
+                            business requirements grow.</p>
+                    </div>
+
+                    <div class="quality-principle-item">
+                        <span class="principle-tag">03 — MAINTAINABILITY</span>
+                        <div class="principle-title">Clean code. Easier updates.</div>
+                        <p class="principle-desc">We structure Shopify development so future improvements don't become
+                            unnecessarily difficult or expensive.</p>
+                    </div>
+
+                    <div class="quality-principle-item">
+                        <span class="principle-tag">04 — RESPONSIVENESS</span>
+                        <div class="principle-title">Designed for every screen</div>
+                        <p class="principle-desc">We build and test storefront experiences across desktop, tablet and
+                            mobile devices.</p>
+                    </div>
+
+                    <div class="technical-tags-cloud">
+                        <span class="tech-tag">Shopify 2.0</span>
+                        <span class="tech-tag">Liquid</span>
+                        <span class="tech-tag">Custom Sections</span>
+                        <span class="tech-tag">Shopify APIs</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Performance Optimization</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dev FAQ Section -->
-    <section class="testimonials-section">
-        <div class="container" style="max-width: 860px;">
+    <!-- 05. PERFORMANCE SECTION -->
+    <section class="workflow-section" id="performance">
+        <div class="container">
             <div class="section-header">
-                <span class="badge badge-emerald">Developer FAQ</span>
-                <h2 style="margin-top: 12px;">Technical Questions Answered</h2>
-                <p>Clear answers on how I work, store migrations, and speed guarantees.</p>
+                <span class="badge badge-dark">SHOPIFY PERFORMANCE</span>
+                <h2 style="margin-top: 12px;">Fast Stores Create Better Shopping Experiences.</h2>
+                <p>Performance isn't something we check only before launch. We consider it throughout the development
+                    process — from theme structure and assets to scripts, apps and storefront functionality.</p>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div
-                    style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px;">
-                    <h4 style="color: var(--text-main); margin-bottom: 8px;">Why custom Liquid code instead of
-                        installing pre-made Shopify apps?</h4>
-                    <p style="font-size: 0.95rem;">Pre-made apps often inject 15+ external JavaScript files that slow
-                        down your store by 2 to 4 seconds. By building features (like sticky cart drawers, custom size
-                        charts, and upsells) directly into Liquid, your store loads instantly and saves hundreds per
-                        month in app subscriptions.</p>
+            <div class="performance-grid">
+                <!-- Card 01 -->
+                <div class="performance-card">
+                    <div class="performance-card-icon">⚡</div>
+                    <h3>Theme Performance</h3>
+                    <p>Reduce unnecessary theme code and build efficient storefront components.</p>
                 </div>
 
-                <div
-                    style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px;">
-                    <h4 style="color: var(--text-main); margin-bottom: 8px;">Do you guarantee green Lighthouse speed
-                        scores?</h4>
-                    <p style="font-size: 0.95rem;">Yes! For custom theme builds, I guarantee a 90+ mobile Lighthouse
-                        score and sub-1-second initial load time. I optimize image formats (WebP/AVIF), defer
-                        non-critical scripts, and eliminate unused CSS.</p>
+                <!-- Card 02 -->
+                <div class="performance-card">
+                    <div class="performance-card-icon">🚀</div>
+                    <h3>App & Script Optimization</h3>
+                    <p>Identify unnecessary scripts and third-party functionality that may affect the storefront
+                        experience.</p>
                 </div>
 
-                <div
-                    style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px;">
-                    <h4 style="color: var(--text-main); margin-bottom: 8px;">How do you work alongside the Lead UI/UX
-                        Designer?</h4>
-                    <p style="font-size: 0.95rem;">We collaborate during the initial Figma phase so that design files
-                        match Shopify's native architecture. This eliminates re-work and ensures that every visual
-                        component is engineered cleanly from day one.</p>
+                <!-- Card 03 -->
+                <div class="performance-card">
+                    <div class="performance-card-icon">📊</div>
+                    <h3>Core Web Vitals</h3>
+                    <p>Build with key performance signals such as loading, responsiveness and visual stability in mind.
+                    </p>
+                </div>
+
+                <!-- Card 04 -->
+                <div class="performance-card">
+                    <div class="performance-card-icon">🖼️</div>
+                    <h3>Image & Media Optimization</h3>
+                    <p>Compress catalog images, serve next-gen WebP formats, and implement responsive lazy loading to
+                        maximize visual fidelity with minimal payload.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="#contact" class="btn btn-emerald">Improve My Store Speed →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. SHOPIFY MIGRATION -->
+    <section class="services-section" id="migration">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-navy">SHOPIFY MIGRATION</span>
+                <h2 style="margin-top: 12px;">Moving to Shopify? Make the Switch Without Losing Momentum.</h2>
+                <p>We help businesses migrate their existing eCommerce stores to Shopify with careful attention to
+                    structure, content, functionality, URLs and the customer experience.</p>
+            </div>
+
+            <div
+                style="max-width: 900px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 44px; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--text-main);">Comprehensive Migration
+                    Includes:</h3>
+                <div class="feature-pill-list" style="margin-bottom: 32px;">
+                    <span class="feature-pill">✓ Store & Product Migration</span>
+                    <span class="feature-pill">✓ Collection & Navigation Structure</span>
+                    <span class="feature-pill">✓ URL & Redirect Planning</span>
+                    <span class="feature-pill">✓ Theme Development</span>
+                    <span class="feature-pill">✓ Essential App Setup</span>
+                    <span class="feature-pill">✓ Tracking Setup</span>
+                    <span class="feature-pill">✓ Responsive QA</span>
+                    <span class="feature-pill">✓ Pre-Launch Testing</span>
+                </div>
+                <a href="#contact" class="btn btn-emerald">Plan Your Shopify Migration →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. DEVELOPMENT PROCESS -->
+    <section class="workflow-section" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-dark">HOW WE BUILD</span>
+                <h2 style="margin-top: 12px;">From Requirement to Reliable Shopify Store.</h2>
+                <p>A structured process keeps development predictable, reduces unnecessary revisions and ensures the
+                    final store works as well as it looks.</p>
+            </div>
+
+            <div class="workflow-grid">
+                <div class="workflow-step-card">
+                    <span class="step-number">01</span>
+                    <span class="step-owner owner-both">Step 01</span>
+                    <h3>Understand</h3>
+                    <p>We review your business, store requirements, technical needs and customer journey.</p>
+                </div>
+
+                <div class="workflow-step-card">
+                    <span class="step-number">02</span>
+                    <span class="step-owner owner-designer">Step 02</span>
+                    <h3>Plan</h3>
+                    <p>We define the technical approach, Shopify architecture, integrations and development scope.</p>
+                </div>
+
+                <div class="workflow-step-card">
+                    <span class="step-number">03</span>
+                    <span class="step-owner owner-dev">Step 03</span>
+                    <h3>Build</h3>
+                    <p>Our developers turn the approved design and requirements into clean Shopify functionality.</p>
+                </div>
+
+                <div class="workflow-step-card">
+                    <span class="step-number">04</span>
+                    <span class="step-owner owner-dev">Step 04</span>
+                    <h3>Test</h3>
+                    <p>We test functionality, responsiveness, browser compatibility, performance and key user journeys.
+                    </p>
+                </div>
+
+                <div class="workflow-step-card">
+                    <span class="step-number">05</span>
+                    <span class="step-owner owner-both">Step 05</span>
+                    <h3>Launch</h3>
+                    <p>After final QA, we prepare the store for launch and provide the support needed to go live
+                        confidently.</p>
+                </div>
+
+                <div class="workflow-step-card">
+                    <span class="step-number">06</span>
+                    <span class="step-owner owner-both">Step 06</span>
+                    <h3>Improve</h3>
+                    <p>After launch, we can continue supporting optimization, new features, fixes and ongoing
+                        development.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Developer Booking CTA Section -->
-    <section class="contact-section" id="dev-contact">
+    <!-- 08. TECHNICAL FAQ -->
+    <section class="case-studies-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-emerald">SHOPIFY FAQ</span>
+                <h2 style="margin-top: 12px;">Technical Questions, Clearly Answered.</h2>
+                <p>No confusing technical language. Just straightforward answers about how we approach Shopify
+                    development, performance and ongoing improvements.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">Can you work with our existing Shopify theme?</div>
+                    <div class="faq-answer">Yes. We can work with an existing Shopify theme to improve its design,
+                        functionality, performance or structure. After reviewing the current implementation, we'll
+                        recommend whether it makes more sense to optimize the existing theme or rebuild specific areas.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can you build a completely custom Shopify store?</div>
+                    <div class="faq-answer">Yes. We can build custom Shopify storefronts around your brand, customer
+                        journey and business requirements — from custom sections and templates to advanced storefront
+                        functionality.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can you redesign our Shopify store without rebuilding everything?</div>
+                    <div class="faq-answer">Yes. Depending on the current theme and technical structure, we can redesign
+                        and improve selected areas without replacing the entire store. We'll first assess what should be
+                        retained, improved or rebuilt.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can you improve our Shopify store speed?</div>
+                    <div class="faq-answer">Yes. We can review theme code, third-party scripts, apps, images and
+                        storefront functionality to identify potential performance bottlenecks and improvement
+                        opportunities. We focus on improving real storefront performance rather than chasing a score
+                        alone.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can you work with our UI/UX designer?</div>
+                    <div class="faq-answer">Absolutely. Our development team can work directly with your existing
+                        designer or design team. We can review Figma files, clarify interactions and translate the
+                        approved experience into Shopify.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can you build custom Shopify functionality?</div>
+                    <div class="faq-answer">Yes. We can develop custom Liquid sections, storefront components, theme
+                        functionality and integrations based on your requirements.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can you migrate our existing store to Shopify?</div>
+                    <div class="faq-answer">Yes. We can support Shopify migrations including store structure, products,
+                        collections, URLs, redirects, theme development, integrations and pre-launch QA.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you provide ongoing Shopify development support?</div>
+                    <div class="faq-answer">Yes. We can support ongoing improvements, feature development, bug fixes,
+                        optimization and technical maintenance after launch.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 09. DEVELOPER / TECHNICAL AUDIT CTA -->
+    <section class="section-dark-navy" id="contact">
         <div class="container">
             <div class="contact-grid">
-                <div>
-                    <span class="badge badge-emerald" style="margin-bottom: 16px;">Direct Developer Line</span>
-                    <h2 style="margin-top: 8px;">Need Custom Shopify Code or a Speed Audit?</h2>
-                    <p style="margin-top: 16px;">Send over your current store URL or project requirements. I'll
-                        personally review your theme code and run a technical speed audit before our call.</p>
+                <div class="contact-info-side">
+                    <span class="badge badge-dark-navy" style="margin-bottom: 20px;">LET'S TALK SHOPIFY</span>
+                    <h2>Have a Shopify Challenge? Let's Solve It.</h2>
+                    <p style="margin-top: 16px;">Whether you're building a new store, redesigning an existing one or
+                        dealing with a technical challenge, send us the details. We'll review your requirements and
+                        recommend the most practical next step.</p>
 
                     <div
-                        style="margin-top: 32px; background: var(--bg-dark-card); border: 1px solid var(--border-dark); padding: 24px; border-radius: var(--radius-md);">
-                        <div style="font-weight: 700; color: #FFF; margin-bottom: 4px;">⚡ Quick Tech Audit Includes:
-                        </div>
+                        style="margin-top: 32px; background: var(--bg-dark-card); border: 1px solid var(--border-dark-subtle); border-radius: var(--radius-md); padding: 24px;">
+                        <h4 style="color: #6EE7B7; font-size: 1rem; margin-bottom: 16px;">Every initial review can look
+                            at:</h4>
                         <ul
-                            style="color: var(--text-on-dark-muted); font-size: 0.9rem; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
-                            <li>• App script bloat breakdown</li>
-                            <li>• Core Web Vitals bottleneck analysis</li>
-                            <li>• Liquid theme code health check</li>
+                            style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem; color: var(--text-on-dark-muted);">
+                            <li>✓ Store Structure</li>
+                            <li>✓ Theme & Code Quality</li>
+                            <li>✓ Core Web Vitals Opportunities</li>
+                            <li>✓ Third-Party Scripts & Apps</li>
+                            <li>✓ Shopify Functionality</li>
+                            <li>✓ UX & Conversion Friction</li>
                         </ul>
+                    </div>
+
+                    <div class="contact-details-box">
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-label">Email</span>
+                            <a href="mailto:hello@kineticduo.com" class="contact-detail-value"
+                                data-bind="contact-email">hello@kineticduo.com</a>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-label">Availability</span>
+                            <span style="font-size: 1.1rem; font-weight: 700; color: var(--text-on-dark);">Available
+                                Worldwide</span>
+                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <form id="developer-contact-form" data-form-type="developer"
-                        style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 36px;">
+                <div class="contact-form-card">
+                    <form id="contact-form">
                         <div class="form-group">
-                            <label for="dev_name">Your Name</label>
-                            <input type="text" id="dev_name" name="name" class="form-control"
-                                placeholder="e.g. Store Owner" required>
+                            <label class="form-label" for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" name="name" class="form-input"
+                                placeholder="Enter your name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="dev_email">Work Email</label>
-                            <input type="email" id="dev_email" name="email" class="form-control"
-                                placeholder="hello@yourbrand.com" required>
+                            <label class="form-label" for="contact-email">Work Email</label>
+                            <input type="email" id="contact-email" name="email" class="form-input"
+                                placeholder="you@company.com" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="dev_store">Shopify Store URL</label>
-                            <input type="text" id="dev_store" name="store_url" class="form-control"
-                                placeholder="https://yourbrand.myshopify.com">
+                            <label class="form-label" for="contact-url">Shopify Store URL</label>
+                            <input type="url" id="contact-url" name="store_url" class="form-input"
+                                placeholder="https://yourstore.com">
                         </div>
 
                         <div class="form-group">
-                            <label for="dev_service">Technical Requirement</label>
-                            <select id="dev_service" name="service" class="form-control"
-                                style="background: var(--bg-dark-card); color: white;">
-                                <option value="speed">Speed & Core Web Vitals Optimization</option>
-                                <option value="custom-theme">New OS 2.0 Custom Theme Build</option>
-                                <option value="checkout">Shopify Plus Checkout Extensions</option>
-                                <option value="headless">Headless Storefront API Architecture</option>
+                            <label class="form-label" for="contact-service">What do you need help with?</label>
+                            <select id="contact-service" name="service" class="form-select" required>
+                                <option value="New Shopify Store">New Shopify Store</option>
+                                <option value="Store Redesign">Store Redesign</option>
+                                <option value="Custom Shopify Development">Custom Shopify Development</option>
+                                <option value="Shopify Migration">Shopify Migration</option>
+                                <option value="Speed Optimization">Speed Optimization</option>
+                                <option value="Custom Functionality">Custom Functionality</option>
+                                <option value="Tracking & Analytics">Tracking & Analytics</option>
+                                <option value="Ongoing Shopify Support">Ongoing Shopify Support</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="dev_notes">Code / Feature Requirements</label>
-                            <textarea id="dev_notes" name="message" class="form-control"
-                                placeholder="Describe the feature or performance issue you want solved..."></textarea>
+                            <label class="form-label" for="contact-message">Technical / Project Requirements</label>
+                            <textarea id="contact-message" name="message" class="form-textarea"
+                                placeholder="Tell us about your store, requirements, challenges or the functionality you want to build."
+                                required></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-emerald" style="width: 100%;">Request Tech Audit & Estimate
-                            →</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Request a Shopify
+                            Consultation →</button>
+                        <p
+                            style="font-size: 0.82rem; color: var(--text-on-dark-muted); text-align: center; margin-top: 12px;">
+                            We'll review your requirements and get back to you with the right next step.</p>
                     </form>
 
-                    <div id="developer-form-success"
-                        style="display: none; background: #064E3B; border: 1px solid #10B981; border-radius: var(--radius-lg); padding: 40px; text-align: center; color: #ECFDF5;">
-                        <h3 style="color: #FFF; margin-bottom: 12px;">Audit Request Received!</h3>
-                        <p style="color: #A7F3D0;">Our developer will run your store through performance diagnostics and
-                            contact
-                            you within 24 hours.</p>
+                    <div class="form-success-state"
+                        style="display: none; background: rgba(5, 150, 105, 0.15); border: 1px solid rgba(5, 150, 105, 0.4); border-radius: var(--radius-md); padding: 40px 24px; text-align: center; color: #ECFDF5;">
+                        <div style="font-size: 2.5rem; margin-bottom: 12px;">✅</div>
+                        <h3 style="color: #FFF; margin-bottom: 8px;">Consultation Request Received!</h3>
+                        <p style="color: #A7F3D0; font-size: 0.95rem; line-height: 1.6;">Thank you! Your details have
+                            been sent to our Lead Developer. We will review your store requirements and reply within 24
+                            hours.</p>
                     </div>
                 </div>
             </div>
@@ -443,56 +722,56 @@
                         style="color: #FFF; margin-bottom: 16px; display: inline-flex;">
                         KINETIC <span class="brand-badge">DUO STUDIO</span>
                     </a>
-                    <p style="color: var(--text-on-dark-muted); font-size: 0.9rem; max-width: 320px;">
-                        Senior Shopify Development architecture focused on 95+ Core Web Vitals speed scores and custom
-                        Liquid themes.
+                    <p style="color: var(--text-on-dark-muted); font-size: 0.9rem; max-width: 320px; line-height: 1.65;">
+                        A specialized boutique studio creating revenue-driven Shopify UI/UX design and ultra-fast custom Liquid themes for ambitious D2C brands.
                     </p>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Pages
-                    </h4>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Pages</h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="shopify-developer.html">Shopify Developer</a></li>
                         <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
-                        <li><a href="index.html#estimator">Scope Estimator</a></li>
+                        <li><a href="index.html#joint-work">Joint Work</a></li>
+                        <li><a href="about.html">About Us</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Services
-                    </h4>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Services</h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
-                        <li><a href="#services">Custom Liquid Themes</a></li>
-                        <li><a href="#services">95+ Speed Audit</a></li>
-                        <li><a href="#services">GA4 / GTM / Meta Pixel</a></li>
-                        <li><a href="#services">Shopify Store Setup</a></li>
+                        <li><a href="shopify-developer.html#capabilities">Custom Liquid Themes</a></li>
+                        <li><a href="ui-ux-designer.html#capabilities">Shopify UI/UX Design</a></li>
+                        <li><a href="shopify-developer.html#performance">95+ Speed Optimization</a></li>
+                        <li><a href="ui-ux-designer.html#cro">Mobile & CRO Optimization</a></li>
+                        <li><a href="shopify-developer.html#capabilities">Ongoing Studio Support</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Contact
-                    </h4>
-                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted);">Direct email:
-                        duo@kinetic-studio.com</p>
-                    <div style="margin-top: 12px; font-size: 0.85rem; color: var(--emerald-primary);">● Available for
-                        Store Builds</div>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Start a Project</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted); margin-bottom: 14px;">
+                        Direct email: <a href="mailto:hello@kineticduo.com" style="color: #6EE7B7; text-decoration: underline;">hello@kineticduo.com</a>
+                    </p>
+                    <a href="index.html#contact" class="btn btn-emerald btn-sm" style="width: 100%;">Book Studio Call →</a>
+                    <div style="margin-top: 14px; font-size: 0.82rem; color: var(--emerald-primary); display: flex; align-items: center; gap: 6px;">
+                        <span class="pulse-dot"></span> Available for Q3/Q4 Projects
+                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <div>© 2026 Senior Shopify Developer. Part of KINETIC Duo Studio.</div>
+                <div>© 2026 KINETIC DUO STUDIO. All rights reserved. Hand-crafted for high-growth e-commerce.</div>
                 <div style="display: flex; gap: 20px;">
-                    <a href="index.html">← Studio Home</a>
-                    <a href="ui-ux-designer.html">UI/UX Designer Page →</a>
+                    <a href="shopify-developer.html">Developer Portfolio</a>
+                    <a href="ui-ux-designer.html">Designer Portfolio</a>
+                    <a href="about.html">About Studio</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>
