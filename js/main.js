@@ -199,7 +199,7 @@ function initProjectEstimator() {
 }
 
 /* 4. Google Apps Script Form Submission Integration */
-const GOOGLE_SCRIPT_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbz_9lQoUaVfV21q0U4oD5r2u5E_placeholder/exec';
+const GOOGLE_SCRIPT_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbz2PF2Ac9TNqlpZq5SiK2QifUgrozC61oYiuTva2pG4GTqhDNGtyyELK0oiko6rj_E/exec';
 
 function initFormHandler() {
   const forms = document.querySelectorAll('form');
@@ -208,30 +208,59 @@ function initFormHandler() {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Remove any previous error banner
+      const existingError = form.querySelector('.form-error-message');
+      if (existingError) {
+        existingError.remove();
+      }
+
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalBtnContent = submitBtn ? submitBtn.innerHTML : 'Submit Request';
 
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Sending Details... ⏳';
+        submitBtn.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite; vertical-align: middle; margin-right: 6px; display: inline-block;">
+            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+          </svg>
+          Sending Request...
+        `;
+      }
+
+      const formType = form.dataset.formType || form.id || 'studio_general';
+      let pageSource = window.location.pathname.split('/').pop();
+      if (!pageSource || pageSource.trim() === '') {
+        pageSource = 'index.html';
       }
 
       const formData = new FormData(form);
       const payload = {
-        timestamp: new Date().toISOString(),
-        page_source: window.location.pathname.split('/').pop() || 'index.html',
-        referrer: document.referrer || 'direct',
-        form_id: form.id || 'contact-form'
+        form_type: formType,
+        page_source: pageSource,
+        name: (formData.get('name') || '').toString().trim(),
+        email: (formData.get('email') || '').toString().trim(),
+        store_url: (formData.get('store_url') || '').toString().trim(),
+        service: (formData.get('service') || '').toString().trim(),
+        message: (formData.get('message') || '').toString().trim(),
+        timestamp: new Date().toISOString()
       };
 
+      // Append any additional form fields if present (e.g., budget, timeline, estimate)
       formData.forEach((value, key) => {
-        payload[key] = value;
+        if (!(key in payload)) {
+          payload[key] = value.toString().trim();
+        }
       });
 
       try {
+        // Send payload via text/plain to avoid pre-flight CORS blocks with Google Apps Script
         await fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
           method: 'POST',
-          mode: 'no-cors',
           headers: {
             'Content-Type': 'text/plain;charset=utf-8'
           },
@@ -243,7 +272,7 @@ function initFormHandler() {
         const parent = form.parentElement;
         const successState = parent
           ? parent.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success')
-          : document.querySelector('.form-success-state, #studio-form-success, #contact-success');
+          : document.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success');
 
         if (successState) {
           successState.style.display = 'block';
@@ -254,9 +283,10 @@ function initFormHandler() {
           }
         }
       } catch (err) {
-        console.warn('First attempt returned note, retrying with fallback...', err);
+        console.warn('Standard fetch caught, executing reliable no-cors fallback:', err);
 
         try {
+          // Fallback: Send with mode no-cors for guaranteed delivery to Google Sheets
           await fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
             method: 'POST',
             mode: 'no-cors',
@@ -266,11 +296,12 @@ function initFormHandler() {
             body: JSON.stringify(payload)
           });
 
+          // Show success state
           form.style.display = 'none';
           const parent = form.parentElement;
           const successState = parent
             ? parent.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success')
-            : document.querySelector('.form-success-state, #studio-form-success, #contact-success');
+            : document.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success');
 
           if (successState) {
             successState.style.display = 'block';
@@ -287,6 +318,12 @@ function initFormHandler() {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnContent;
           }
+
+          const errorDiv = document.createElement('div');
+          errorDiv.className = 'form-error-message';
+          errorDiv.style.cssText = 'margin-top: 16px; padding: 14px 18px; background: #7F1D1D; border: 1px solid #EF4444; border-radius: var(--radius-md); color: #FEE2E2; font-size: 0.9rem; text-align: center;';
+          errorDiv.textContent = 'Something went wrong while sending your request. Please email us directly at hello@kineticduo.com';
+          form.appendChild(errorDiv);
         }
       }
     });
