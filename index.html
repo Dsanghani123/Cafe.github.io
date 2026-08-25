@@ -16,7 +16,10 @@
         content="Boutique 2-person e-commerce studio. High-converting UI/UX design and ultra-fast custom Shopify Liquid themes.">
     <meta property="og:type" content="website">
 
-    <!-- CSS -->
+    <!-- Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -33,7 +36,6 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="shopify-developer.html">Shopify Developer</a></li>
                 <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
-                <li><a href="index.html#joint-work">Joint Work</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
 
@@ -71,7 +73,7 @@
                 <div class="hero-stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">5+ Years</div>
-                        <span class="stat-label">Shopify & eCommerce Experience</span>
+                        <span class="stat-label">Shopify Experience</span>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">200+</div>
@@ -90,9 +92,9 @@
                 <div class="hero-floating-card">
                     <div>
                         <div
-                            style="font-size: 0.82rem; font-weight: 700; color: var(--emerald-primary); text-transform: uppercase;">
+                            style="font-size: 0.82rem; font-weight: 700; color: #10B981; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px;">
                             Two Experts. One Goal.</div>
-                        <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-main);">Designer & Developer
+                        <div style="font-size: 1rem; font-weight: 700; color: #FFFFFF;">Designer & Developer
                             Synergy</div>
                     </div>
                     <span class="badge badge-emerald">Direct Access</span>
@@ -106,80 +108,83 @@
         <div class="container">
             <div class="section-header">
                 <span class="badge badge-navy">THE RIGHT TEAM MATTERS</span>
-                <h2 style="margin-top: 12px;">Designers Who Understand Development. Developers Who Understand Design.
-                </h2>
-                <p>No unnecessary layers. No endless handoffs between designers, developers and project managers. You
-                    work with a focused team that understands both the visual and technical sides of your Shopify store
-                    — from the first wireframe to the final line of code.</p>
-            </div>
-
-            <div class="duo-grid">
-                <!-- Shopify Development Card -->
-                <div class="duo-card">
-                    <div>
-                        <div style="margin-bottom: 20px;">
-                            <span class="badge badge-emerald">SHOPIFY DEVELOPMENT</span>
-                        </div>
-                        <h3
-                            style="font-size: 1.65rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; color: var(--text-main);">
-                            Build a Store That's Fast, Flexible &amp; Built to Scale</h3>
-                        <p
-                            style="font-size: 1.02rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 28px;">
-                            From custom Shopify builds to theme development, integrations, custom sections and ongoing
-                            improvements, we build stores around your business — not around limitations.</p>
-
-                        <div class="feature-pill-list">
-                            <span class="feature-pill">Custom Shopify Development</span>
-                            <span class="feature-pill">Shopify 2.0</span>
-                            <span class="feature-pill">Custom Sections</span>
-                            <span class="feature-pill">Shopify Integrations</span>
-                            <span class="feature-pill">Custom Features</span>
-                            <span class="feature-pill">Store Migration</span>
-                            <span class="feature-pill">Performance Optimization</span>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 16px;">
-                        <a href="#estimator" class="btn btn-dark"
-                            style="width: 100%; border-radius: var(--radius-full); padding: 14px 28px; justify-content: center; font-size: 1rem;">Explore
-                            Shopify →</a>
-                    </div>
+                <h2 style="margin-top: 12px;">Designers Who Understand Development. Developers Who Understand Design.</h2>
+                    <p>No unnecessary layers. No endless handoffs between designers, developers and project managers.
+                        You
+                        work with a focused team that understands both the visual and technical sides of your Shopify
+                        store
+                        — from the first wireframe to the final line of code.</p>
                 </div>
 
-                <!-- UI/UX Design Card -->
-                <div class="duo-card">
-                    <div>
-                        <div style="margin-bottom: 20px;">
-                            <span class="badge badge-navy">UI/UX DESIGN</span>
-                        </div>
-                        <h3
-                            style="font-size: 1.65rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; color: var(--text-main);">
-                            Design Experiences That Make Buying Easier</h3>
-                        <p
-                            style="font-size: 1.02rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 28px;">
-                            We create clean, intuitive and conversion-focused experiences that help customers understand
-                            your products, navigate your store and make confident purchase decisions.</p>
+                <div class="duo-grid">
+                    <!-- Shopify Development Card -->
+                    <div class="duo-card">
+                        <div>
+                            <div style="margin-bottom: 20px;">
+                                <span class="badge badge-emerald">SHOPIFY DEVELOPMENT</span>
+                            </div>
+                            <h3
+                                style="font-size: 1.65rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; color: var(--text-main);">
+                                Build a Store That's Fast, Flexible &amp; Built to Scale</h3>
+                            <p
+                                style="font-size: 1.02rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 28px;">
+                                From custom Shopify builds to theme development, integrations, custom sections and
+                                ongoing
+                                improvements, we build stores around your business — not around limitations.</p>
 
-                        <div class="feature-pill-list">
-                            <span class="feature-pill">UX Research</span>
-                            <span class="feature-pill">User Journey</span>
-                            <span class="feature-pill">Wireframes</span>
-                            <span class="feature-pill">UI Design</span>
-                            <span class="feature-pill">Mobile-First Design</span>
-                            <span class="feature-pill">Design Systems</span>
-                            <span class="feature-pill">Shopify Store Design</span>
-                            <span class="feature-pill">CRO-Focused UX</span>
+                            <div class="feature-pill-list">
+                                <span class="feature-pill">Custom Shopify Development</span>
+                                <span class="feature-pill">Shopify 2.0</span>
+                                <span class="feature-pill">Custom Sections</span>
+                                <span class="feature-pill">Shopify Integrations</span>
+                                <span class="feature-pill">Custom Features</span>
+                                <span class="feature-pill">Store Migration</span>
+                                <span class="feature-pill">Performance Optimization</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 16px;">
+                            <a href="#estimator" class="btn btn-dark"
+                                style="width: 100%; border-radius: var(--radius-full); padding: 14px 28px; justify-content: center; font-size: 1rem;">Explore
+                                Shopify →</a>
                         </div>
                     </div>
 
-                    <div style="margin-top: 16px;">
-                        <a href="#estimator" class="btn btn-dark"
-                            style="width: 100%; border-radius: var(--radius-full); padding: 14px 28px; justify-content: center; font-size: 1rem;">Explore
-                            UI/UX →</a>
+                    <!-- UI/UX Design Card -->
+                    <div class="duo-card">
+                        <div>
+                            <div style="margin-bottom: 20px;">
+                                <span class="badge badge-navy">UI/UX DESIGN</span>
+                            </div>
+                            <h3
+                                style="font-size: 1.65rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; color: var(--text-main);">
+                                Design Experiences That Make Buying Easier</h3>
+                            <p
+                                style="font-size: 1.02rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 28px;">
+                                We create clean, intuitive and conversion-focused experiences that help customers
+                                understand
+                                your products, navigate your store and make confident purchase decisions.</p>
+
+                            <div class="feature-pill-list">
+                                <span class="feature-pill">UX Research</span>
+                                <span class="feature-pill">User Journey</span>
+                                <span class="feature-pill">Wireframes</span>
+                                <span class="feature-pill">UI Design</span>
+                                <span class="feature-pill">Mobile-First Design</span>
+                                <span class="feature-pill">Design Systems</span>
+                                <span class="feature-pill">Shopify Store Design</span>
+                                <span class="feature-pill">CRO-Focused UX</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 16px;">
+                            <a href="#estimator" class="btn btn-dark"
+                                style="width: 100%; border-radius: var(--radius-full); padding: 14px 28px; justify-content: center; font-size: 1rem;">Explore
+                                UI/UX →</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Services Section -->
@@ -486,7 +491,7 @@
     <section class="testimonials-section">
         <div class="container">
             <div class="section-header">
-                <span class="badge badge-emerald">Client Words</span>
+                <span class="badge badge-emerald">Client Story</span>
                 <h2 style="margin-top: 12px;">Trusted By E-Commerce Founders</h2>
                 <p>Here is what happens when you skip traditional agencies and work directly with senior experts.</p>
             </div>
@@ -607,11 +612,14 @@
                             <label for="interest">Primary Goal / Service Needed</label>
                             <select id="interest" name="service" class="form-control"
                                 style="background: var(--bg-dark-card); color: white;">
-                                <option value="Complete Store Redesign & Build (Design + Code)">Complete Store Redesign & Build (Design + Code)</option>
+                                <option value="Complete Store Redesign & Build (Design + Code)">Complete Store Redesign
+                                    & Build (Design + Code)</option>
                                 <option value="Custom Shopify 2.0 Development">Custom Shopify 2.0 Development</option>
                                 <option value="Shopify UI/UX Storefront Design">Shopify UI/UX Storefront Design</option>
-                                <option value="Mobile UX & Conversion Optimization (CRO)">Mobile UX & Conversion Optimization (CRO)</option>
-                                <option value="Speed & Core Web Vitals Optimization">Speed & Core Web Vitals Optimization</option>
+                                <option value="Mobile UX & Conversion Optimization (CRO)">Mobile UX & Conversion
+                                    Optimization (CRO)</option>
+                                <option value="Speed & Core Web Vitals Optimization">Speed & Core Web Vitals
+                                    Optimization</option>
                                 <option value="Tracking, GA4 & Integrations">Tracking, GA4 & Integrations</option>
                                 <option value="Ongoing Studio Partnership">Ongoing Studio Partnership</option>
                                 <option value="Other">Other</option>
@@ -648,57 +656,60 @@
                         style="color: #FFF; margin-bottom: 16px; display: inline-flex;">
                         KINETIC <span class="brand-badge">DUO STUDIO</span>
                     </a>
-                    <p style="color: var(--text-on-dark-muted); font-size: 0.9rem; max-width: 320px; line-height: 1.65;">
-                        A specialized boutique studio creating revenue-driven Shopify UI/UX design and ultra-fast custom Liquid themes for ambitious D2C brands.
+                    <p style="color: var(--text-on-dark-muted); font-size: 0.9rem; max-width: 320px;">
+                        A specialized 2-person e-commerce studio creating revenue-driven UI/UX design and ultra-fast
+                        custom Shopify Liquid themes.
                     </p>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Pages</h4>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Pages
+                    </h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="shopify-developer.html">Shopify Developer</a></li>
                         <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
-                        <li><a href="index.html#joint-work">Joint Work</a></li>
                         <li><a href="about.html">About Us</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Services</h4>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">
+                        Specialties</h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
-                        <li><a href="shopify-developer.html#capabilities">Custom Liquid Themes</a></li>
-                        <li><a href="ui-ux-designer.html#capabilities">Shopify UI/UX Design</a></li>
-                        <li><a href="shopify-developer.html#performance">95+ Speed Optimization</a></li>
-                        <li><a href="ui-ux-designer.html#cro">Mobile & CRO Optimization</a></li>
-                        <li><a href="shopify-developer.html#capabilities">Ongoing Studio Support</a></li>
+                        <li><a href="shopify-developer.html">Custom Liquid Themes</a></li>
+                        <li><a href="shopify-developer.html">95+ Speed Optimization</a></li>
+                        <li><a href="ui-ux-designer.html">Figma Design Systems</a></li>
+                        <li><a href="ui-ux-designer.html">PDP UX Optimization</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Start a Project</h4>
-                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted); margin-bottom: 14px;">
-                        Direct email: <a href="mailto:hello@kineticduo.com" style="color: #6EE7B7; text-decoration: underline;">hello@kineticduo.com</a>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px;">Contact
+                    </h4>
+                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted);">Direct line: duo@kinetic-studio.com
                     </p>
-                    <a href="index.html#contact" class="btn btn-emerald btn-sm" style="width: 100%;">Book Studio Call →</a>
-                    <div style="margin-top: 14px; font-size: 0.82rem; color: var(--emerald-primary); display: flex; align-items: center; gap: 6px;">
-                        <span class="pulse-dot"></span> Available for Q3/Q4 Projects
-                    </div>
+                    <div style="margin-top: 12px; font-size: 0.85rem; color: var(--emerald-primary);">● Taking Q3/Q4
+                        Projects</div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <div>© 2026 KINETIC DUO STUDIO. All rights reserved. Hand-crafted for high-growth e-commerce.</div>
+                <div>© 2026 KINETIC Studio. All rights reserved. Hand-crafted for high-growth e-commerce.</div>
                 <div style="display: flex; gap: 20px;">
                     <a href="shopify-developer.html">Developer Portfolio</a>
                     <a href="ui-ux-designer.html">Designer Portfolio</a>
-                    <a href="about.html">About Studio</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Animation & Smooth Scroll Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- Custom Main JS -->
     <script src="js/main.js"></script>
 </body>
 

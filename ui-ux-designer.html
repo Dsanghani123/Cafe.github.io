@@ -16,9 +16,11 @@
         content="Kinetic Duo Studio creates conversion-focused Shopify and eCommerce UI/UX experiences — from UX strategy to design systems.">
     <meta property="og:type" content="website">
 
-    <!-- CSS & JS -->
+    <!-- Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -34,12 +36,11 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shopify-developer.html">Shopify Developer</a></li>
                 <li><a href="ui-ux-designer.html" class="active">UI/UX Designer</a></li>
-                <li><a href="index.html#joint-work">Joint Work</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#contact" class="btn btn-primary btn-sm">Book Studio Call</a>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book Studio Call</a>
                 <button class="mobile-toggle" aria-label="Toggle navigation menu">☰</button>
             </div>
         </div>
@@ -71,15 +72,15 @@
                 <!-- Trust Strip -->
                 <div class="hero-stats-grid">
                     <div class="stat-item">
-                        <div class="stat-number">Shopify & eCommerce</div>
+                        <div class="stat-text-heading">Shopify & eCommerce</div>
                         <span class="stat-label">Design Expertise</span>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">Mobile + Desktop</div>
+                        <div class="stat-text-heading">Mobile + Desktop</div>
                         <span class="stat-label">Experience Design</span>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">Conversion-Focused</div>
+                        <div class="stat-text-heading">Conversion-Focused</div>
                         <span class="stat-label">UX Approach</span>
                     </div>
                 </div>
@@ -637,38 +638,122 @@
 
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question">Do you design Shopify stores from scratch?</div>
-                    <div class="faq-answer">Yes. We can design the complete Shopify experience from UX strategy and wireframes through high-fidelity UI design and developer-ready Figma files.</div>
+                    <div class="faq-question">
+                        <span>Do you design Shopify stores from scratch?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg class="faq-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line class="faq-line-v" x1="12" y1="5" x2="12" y2="19"></line>
+                                <line class="faq-line-h" x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. We can design the complete Shopify experience from UX strategy and wireframes through high-fidelity UI design and developer-ready Figma files.
+                        </div>
+                    </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Can you redesign only specific pages?</div>
-                    <div class="faq-answer">Absolutely. We can focus on high-impact areas such as your homepage, product pages, collection pages, cart drawer or mobile experience.</div>
+                    <div class="faq-question">
+                        <span>Can you redesign only specific pages?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg class="faq-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line class="faq-line-v" x1="12" y1="5" x2="12" y2="19"></line>
+                                <line class="faq-line-h" x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Absolutely. We can focus on high-impact areas such as your homepage, product pages, collection pages, cart drawer or mobile experience.
+                        </div>
+                    </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Do you work with existing Shopify stores?</div>
-                    <div class="faq-answer">Yes. We can audit your existing experience and recommend improvements without requiring a complete redesign.</div>
+                    <div class="faq-question">
+                        <span>Do you work with existing Shopify stores?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg class="faq-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line class="faq-line-v" x1="12" y1="5" x2="12" y2="19"></line>
+                                <line class="faq-line-h" x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. We can audit your existing experience and recommend improvements without requiring a complete redesign.
+                        </div>
+                    </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Do you provide Figma files?</div>
-                    <div class="faq-answer">Yes. Design projects can include organized Figma files with reusable components, responsive layouts and developer handoff documentation.</div>
+                    <div class="faq-question">
+                        <span>Do you provide Figma files?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg class="faq-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line class="faq-line-v" x1="12" y1="5" x2="12" y2="19"></line>
+                                <line class="faq-line-h" x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Design projects can include organized Figma files with reusable components, responsive layouts and developer handoff documentation.
+                        </div>
+                    </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Can you work with our existing developer?</div>
-                    <div class="faq-answer">Yes. We can collaborate directly with your internal development team or external Shopify developer to ensure the design is implemented accurately.</div>
+                    <div class="faq-question">
+                        <span>Can you work with our existing developer?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg class="faq-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line class="faq-line-v" x1="12" y1="5" x2="12" y2="19"></line>
+                                <line class="faq-line-h" x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. We can collaborate directly with your internal development team or external Shopify developer to ensure the design is implemented accurately.
+                        </div>
+                    </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Do you focus on conversion rate optimization?</div>
-                    <div class="faq-answer">Yes. Conversion thinking is part of our UX approach. We consider customer intent, information hierarchy, friction points, CTAs and shopping journeys when designing key pages.</div>
+                    <div class="faq-question">
+                        <span>Do you focus on conversion rate optimization?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg class="faq-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line class="faq-line-v" x1="12" y1="5" x2="12" y2="19"></line>
+                                <line class="faq-line-h" x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Conversion thinking is part of our UX approach. We consider customer intent, information hierarchy, friction points, CTAs and shopping journeys when designing key pages.
+                        </div>
+                    </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Do you design mobile and desktop separately?</div>
-                    <div class="faq-answer">We design responsive experiences intentionally for both mobile and desktop rather than simply scaling one layout down.</div>
+                    <div class="faq-question">
+                        <span>Do you design mobile and desktop separately?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg class="faq-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line class="faq-line-v" x1="12" y1="5" x2="12" y2="19"></line>
+                                <line class="faq-line-h" x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We design responsive experiences intentionally for both mobile and desktop rather than simply scaling one layout down.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -712,26 +797,23 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="shopify-developer.html">Shopify Developer</a></li>
                         <li><a href="ui-ux-designer.html">UI/UX Designer</a></li>
-                        <li><a href="index.html#joint-work">Joint Work</a></li>
                         <li><a href="about.html">About Us</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Services</h4>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Specialties</h4>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
                         <li><a href="shopify-developer.html#capabilities">Custom Liquid Themes</a></li>
-                        <li><a href="ui-ux-designer.html#capabilities">Shopify UI/UX Design</a></li>
                         <li><a href="shopify-developer.html#performance">95+ Speed Optimization</a></li>
-                        <li><a href="ui-ux-designer.html#cro">Mobile & CRO Optimization</a></li>
-                        <li><a href="shopify-developer.html#capabilities">Ongoing Studio Support</a></li>
+                        <li><a href="ui-ux-designer.html#capabilities">Figma Design Systems</a></li>
+                        <li><a href="ui-ux-designer.html#cro">PDP UX Optimization</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Start a Project</h4>
-                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted); margin-bottom: 14px;">
-                        Direct email: <a href="mailto:hello@kineticduo.com" style="color: #6EE7B7; text-decoration: underline;">hello@kineticduo.com</a>
+                    <h4 style="color: #FFF; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Contact</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-on-dark-muted); margin-bottom: 14px;">Direct line: <a href="mailto:hello@kineticduo.com" style="color: #6EE7B7; text-decoration: underline;">hello@kineticduo.com</a>
                     </p>
                     <a href="index.html#contact" class="btn btn-emerald btn-sm" style="width: 100%;">Book Studio Call →</a>
                     <div style="margin-top: 14px; font-size: 0.82rem; color: var(--emerald-primary); display: flex; align-items: center; gap: 6px;">
@@ -745,12 +827,17 @@
                 <div style="display: flex; gap: 20px;">
                     <a href="shopify-developer.html">Developer Portfolio</a>
                     <a href="ui-ux-designer.html">Designer Portfolio</a>
-                    <a href="about.html">About Studio</a>
+                    <a href="about.html">About Us</a>
                 </div>
             </div>
         </div>
-    </footer>
+    <!-- Animation & Smooth Scroll Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
+    <!-- Custom Main JS -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
