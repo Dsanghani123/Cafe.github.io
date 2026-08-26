@@ -750,8 +750,8 @@ function initCaseStudyModal() {
 
 /* 11. Blog Filters & Interactive Article Modal */
 function initBlogFeatures() {
-  const filterButtons = document.querySelectorAll('#blog-articles-container').length > 0 
-    ? document.querySelectorAll('.portfolio-filters-wrap .filter-tab-btn') 
+  const filterButtons = document.querySelectorAll('#blog-articles-container').length > 0
+    ? document.querySelectorAll('.portfolio-filters-wrap .filter-tab-btn')
     : [];
   const articleCards = document.querySelectorAll('.blog-article-card');
   const modalOverlay = document.getElementById('article-reader-modal');
