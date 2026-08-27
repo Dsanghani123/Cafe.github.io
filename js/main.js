@@ -294,8 +294,8 @@ function initFormHandler() {
         form.style.display = 'none';
         const parent = form.parentElement;
         const successState = parent
-          ? parent.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success')
-          : document.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success');
+          ? parent.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success, #career-form-success, #newsletter-success, #blog-news-success')
+          : document.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success, #career-form-success, #newsletter-success, #blog-news-success');
 
         if (successState) {
           successState.style.display = 'block';
@@ -323,8 +323,8 @@ function initFormHandler() {
           form.style.display = 'none';
           const parent = form.parentElement;
           const successState = parent
-            ? parent.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success')
-            : document.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success');
+            ? parent.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success, #career-form-success, #newsletter-success, #blog-news-success')
+            : document.querySelector('.form-success-state, #studio-form-success, #contact-success, #developer-form-success, #uiux-form-success, #career-form-success, #newsletter-success, #blog-news-success');
 
           if (successState) {
             successState.style.display = 'block';
@@ -624,16 +624,25 @@ function initCaseStudyModal() {
   const openButtons = document.querySelectorAll('[data-case-study]');
   const modalOverlay = document.getElementById('case-study-modal');
   const closeBtn = document.getElementById('case-modal-close');
+  const ctaBtn = document.getElementById('modal-case-cta-btn');
 
   if (!modalOverlay) return;
 
-  // Case Studies Data Dictionary with exact 6-part template
+  // Rich Case Studies Data Dictionary
   const caseStudiesData = {
     aura: {
       tag: "ORGANIC SKINCARE D2C",
+      category: "Shopify 2.0 • Skincare D2C",
       title: "AURA Botanical Skincare",
-      services: "Shopify Development / UI/UX / Redesign / Optimization",
-      desc: "Transforming a modern merchant for a cleaner, high-converting shopping experience.",
+      desc: "Transforming a modern merchant for a cleaner, sub-second high-converting shopping experience.",
+      services: "Shopify Development / UI/UX Redesign / Core Web Vitals Optimization",
+      stack: "Shopify 2.0 • Custom Liquid Snippets • Figma PDP Wireframes • Zero App Bloat",
+      image: "images/project_skincare_mockup.jpg",
+      metrics: [
+        { value: "+42%", label: "Mobile Conv. Rate" },
+        { value: "0.9s", label: "Page Load Speed" },
+        { value: "+28%", label: "AOV via Bundles" }
+      ],
       overview: "AURA Botanical needed to transition away from a rigid, bloated theme that suffered from high bounce rates and slow mobile page loads. The brand set out to rebuild on a bespoke Shopify 2.0 architecture that showcases clean ingredients while delivering a sub-second shopping experience.",
       challenge: "The primary challenge was balancing rich editorial storytelling, interactive ingredient popups, and high-res imagery with aggressive Core Web Vitals targets, especially on 4G mobile devices where 78% of their customer traffic originated.",
       approach: "We initiated the project with deep customer journey mapping in Figma, crafting clean product page wireframes with sticky ATC bars and slide-out cart upsells. Concurrently, we engineered modular Liquid sections with custom metafields for ingredients.",
@@ -643,9 +652,17 @@ function initCaseStudyModal() {
     },
     atelier: {
       tag: "LUXURY APPAREL",
+      category: "Bespoke Fashion Boutique",
       title: "ATELIER ÉLEVÉ",
-      services: "Shopify Development / UI/UX / Redesign",
-      desc: "A custom Shopify 2.0 storefront built for flexibility, editorial prestige, and seamless checkout.",
+      desc: "A custom Shopify 2.0 storefront built for editorial prestige, speed, and seamless checkout.",
+      services: "Shopify Development / UI/UX Design / Lookbook Hotspots / Checkout Acceleration",
+      stack: "Shopify 2.0 • Lookbook Hotspot Modules • Native Swatches • Shop Pay / Apple Pay",
+      image: "images/project_fashion_mockup.jpg",
+      metrics: [
+        { value: "+34%", label: "Checkout Rate" },
+        { value: "99/100", label: "Mobile Speed Score" },
+        { value: "2.4x", label: "Lookbook Upsell" }
+      ],
       overview: "ATELIER ÉLEVÉ required an elevated, boutique shopping destination that reflected Parisian luxury fashion while providing their marketing team with flexible modular sections for seasonal lookbooks.",
       challenge: "High abandonment at the product variant selection stage due to confusing size guide popups and clunky dropdowns on mobile screens.",
       approach: "Re-architected the entire PDP in Figma with dynamic swatch selectors, visual size recommendation modals, and integrated high-fashion editorial carousels powered by native Shopify metafields.",
@@ -655,9 +672,17 @@ function initCaseStudyModal() {
     },
     lumina: {
       tag: "D2C HOME & LIVING",
+      category: "High-Catalog Home Living",
       title: "LUMINA Goods",
-      services: "Shopify Development / Speed & Performance / Optimization",
-      desc: "Modernizing a timeless store layout, flow, and sub-second Ajax search.",
+      desc: "Modernizing a timeless store layout, flow, and sub-second Ajax live search.",
+      services: "Shopify Architecture / Speed Optimization / CRO / App Bloat Removal",
+      stack: "Liquid Snippets • Ajax Live Search • Native Collection Filters • GA4 QA",
+      image: "images/project_dev_speed_dashboard.jpg",
+      metrics: [
+        { value: "98/100", label: "Lighthouse Score" },
+        { value: "+28%", label: "Rev / Visitor" },
+        { value: "-64%", label: "App Bloat Removed" }
+      ],
       overview: "LUMINA Goods was experiencing sluggish load times and dropping conversion rates across their multi-category home living storefront due to years of accumulated app scripts and unoptimized assets.",
       challenge: "Page load times exceeded 4.8 seconds on mobile, failing Google Core Web Vitals and hurting organic search rankings and ad conversion efficiency.",
       approach: "Conducted a ruthless technical audit, removing redundant app scripts, converting DOM heavy widgets into native Liquid snippets, and restructuring media delivery with next-gen responsive image tags.",
@@ -667,9 +692,17 @@ function initCaseStudyModal() {
     },
     vortex: {
       tag: "PERFORMANCE APPAREL",
+      category: "High-Velocity Activewear",
       title: "VORTEX Activewear",
-      services: "Shopify Development / CRO & Experience Optimization",
       desc: "High-velocity activewear storefront with cart drawer upsells and frictionless mobile UX.",
+      services: "Shopify Development / CRO & Experience Optimization / Cart Architecture",
+      stack: "Slide-out Cart Drawer • Tiered Free Shipping Bar • Sticky ATC • Quick Size Picker",
+      image: "images/project_activewear_mockup.jpg",
+      metrics: [
+        { value: "+38%", label: "Multi-Item Carts" },
+        { value: "+22%", label: "BFCM AOV Boost" },
+        { value: "0.8s", label: "Cart Drawer Speed" }
+      ],
       overview: "VORTEX wanted to scale their high-traffic drops with an ultra-responsive storefront that could handle peak traffic surges without checkout slowdowns.",
       challenge: "Traffic was high, but shoppers frequently abandoned single-item carts without exploring complementary gear.",
       approach: "Designed and built an intelligent slide-out cart drawer with dynamic tier progress bars (Free Shipping, Free Gift, VIP Discount) and 1-click cross-sell product suggestions.",
@@ -679,9 +712,17 @@ function initCaseStudyModal() {
     },
     noir: {
       tag: "LUXURY HOROLOGY",
+      category: "Bespoke Timepiece PDP",
       title: "NOIR & BLANC Timepieces",
-      services: "UI/UX Design / Custom Liquid Development",
-      desc: "Bespoke timepiece product experience with custom strap configurator.",
+      desc: "Bespoke timepiece product experience with interactive strap configurator.",
+      services: "UI/UX Design / Custom Liquid Development / 3D Product Customizer",
+      stack: "Macro Zoom PDP • Strap Configurator • Native Liquid • Zero Plugins",
+      image: "images/project_watches_mockup.jpg",
+      metrics: [
+        { value: "+55%", label: "Time on Page" },
+        { value: "3.2x", label: "Strap Add-on Sales" },
+        { value: "-48%", label: "Inquiry Tickets" }
+      ],
       overview: "NOIR & BLANC needed an exquisite digital showroom that allowed collectors to visualize custom watch dials and strap combinations in real-time.",
       challenge: "High-ticket horology requires immense customer trust and flawless visual representation of micro-craftsmanship.",
       approach: "Created a tactile, interactive strap configurator in Figma and coded it natively in Liquid and Vanilla JS with zero third-party plugin bloat.",
@@ -691,9 +732,17 @@ function initCaseStudyModal() {
     },
     solaris: {
       tag: "WELLNESS & SUPPLEMENTS",
+      category: "D2C Health & Subscriptions",
       title: "SOLARIS Nutrition",
-      services: "Shopify Development / UI/UX / Analytics & Tracking",
       desc: "Clean wellness eCommerce with seamless subscription recharge and GA4 tracking.",
+      services: "Shopify Development / UI/UX / Recharge Subscriptions / Analytics & Tracking",
+      stack: "Recharge Engine • Subscribe & Save UI • GA4 Server-Side • Clarity Heatmaps",
+      image: "images/project_supplements_mockup.jpg",
+      metrics: [
+        { value: "+68%", label: "Subscriber Growth" },
+        { value: "99.4%", label: "Tracking QA Accuracy" },
+        { value: "+31%", label: "Store Conv. Rate" }
+      ],
       overview: "SOLARIS Nutrition required a clean, science-backed storefront with recurring subscription bundles and airtight tracking across all acquisition funnels.",
       challenge: "Subscription options were hidden inside complicated radio buttons, resulting in lost recurring revenue and high customer support volume.",
       approach: "Redesigned the subscription selector box with clear savings callouts ('Subscribe & Save 20%'), flexible frequency toggles, and instant cart updates.",
@@ -711,15 +760,53 @@ function initCaseStudyModal() {
 
       if (!data) return;
 
-      document.getElementById('modal-case-tag').innerText = data.tag;
-      document.getElementById('modal-case-title').innerText = data.title;
-      document.getElementById('modal-case-services').innerText = data.services;
-      document.getElementById('modal-case-overview').innerText = data.overview;
-      document.getElementById('modal-case-challenge').innerText = data.challenge;
-      document.getElementById('modal-case-approach').innerText = data.approach;
-      document.getElementById('modal-case-work').innerText = data.work;
-      document.getElementById('modal-case-result').innerText = data.result;
-      document.getElementById('modal-case-takeaway').innerText = data.takeaway;
+      const tagEl = document.getElementById('modal-case-tag');
+      const catEl = document.getElementById('modal-case-category');
+      const titleEl = document.getElementById('modal-case-title');
+      const subEl = document.getElementById('modal-case-subtitle');
+      const servEl = document.getElementById('modal-case-services');
+      const stackEl = document.getElementById('modal-case-stack');
+      const imgEl = document.getElementById('modal-case-image');
+      const metricsContainer = document.getElementById('modal-case-metrics');
+      const overEl = document.getElementById('modal-case-overview');
+      const chalEl = document.getElementById('modal-case-challenge');
+      const apprEl = document.getElementById('modal-case-approach');
+      const workEl = document.getElementById('modal-case-work');
+      const resEl = document.getElementById('modal-case-result');
+      const takeEl = document.getElementById('modal-case-takeaway');
+
+      if (tagEl) tagEl.innerText = data.tag;
+      if (catEl) catEl.innerText = data.category || "Shopify 2.0 Storefront";
+      if (titleEl) titleEl.innerText = data.title;
+      if (subEl) subEl.innerText = data.desc || "";
+      if (servEl) servEl.innerText = data.services;
+      if (stackEl) stackEl.innerText = data.stack || "Shopify 2.0 • Custom Liquid • Core Web Vitals";
+
+      if (imgEl && data.image) {
+        imgEl.src = data.image;
+        imgEl.alt = `${data.title} Case Study Preview`;
+      }
+
+      if (metricsContainer && data.metrics && data.metrics.length > 0) {
+        metricsContainer.innerHTML = data.metrics.map(m => `
+          <div class="case-modal-metric-card">
+            <div class="case-modal-metric-val">${m.value}</div>
+            <div class="case-modal-metric-lbl">${m.label}</div>
+          </div>
+        `).join('');
+      }
+
+      if (overEl) overEl.innerText = data.overview;
+      if (chalEl) chalEl.innerText = data.challenge;
+      if (apprEl) apprEl.innerText = data.approach;
+      if (workEl) workEl.innerText = data.work;
+      if (resEl) resEl.innerText = data.result;
+      if (takeEl) takeEl.innerText = data.takeaway;
+
+      const modalContainer = modalOverlay.querySelector('.case-modal-container');
+      if (modalContainer) {
+        modalContainer.scrollTop = 0;
+      }
 
       modalOverlay.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -733,6 +820,10 @@ function initCaseStudyModal() {
 
   if (closeBtn) {
     closeBtn.addEventListener('click', closeModal);
+  }
+
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', closeModal);
   }
 
   modalOverlay.addEventListener('click', (e) => {
