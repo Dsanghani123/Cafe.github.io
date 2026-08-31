@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initFaqAccordion();
   initScrollAnimations();
+  initSpeedProgressBars();
+  initInteractiveCardTilt();
+  initMagneticButtons();
   initPortfolioFilters();
   initCaseStudyModal();
   initBlogFeatures();
@@ -448,11 +451,11 @@ function initFaqAccordion() {
   });
 }
 
-/* 8. Bulletproof Scroll Reveal & GSAP Animations (No Blank Sections) */
+/* 8. Modern Hardware-Accelerated Scroll Reveal & GSAP Choreography */
 function initScrollAnimations() {
-  // 1. Reveal All Cards & Content Elements on Scroll
+  // 1. Reveal All Cards & Content Elements on Scroll (Including All New Service Components)
   const revealTargets = document.querySelectorAll(
-    '.service-card, .service-block-item, .performance-card, .workflow-step-card, .why-us-card, .approach-step-card, .duo-card, .toolkit-card, .portfolio-card, .portfolio-card-item, .process-card-step, .audience-card, .pillar-card, .cta-banner-card, .journey-step-card, .comparison-card, .faq-item, .testimonial-card, .editorial-quote-box, .code-mockup-window, .section-header, .estimator-box, .contact-form-card, .contact-info-side, .case-study-content, .case-study-media, .partner-table-cell, .brand-showcase-card, .value-box-card, .stat-summary-item, .venn-svg-wrapper'
+    '.service-card, .service-block-item, .tech-matrix-card, .performance-card, .workflow-step-card, .why-us-card, .approach-step-card, .duo-card, .toolkit-card, .portfolio-card, .portfolio-card-item, .process-card-step, .audience-card, .pillar-card, .cta-banner-card, .journey-step-card, .comparison-card, .transformation-pane, .transformation-split-grid, .faq-item, .testimonial-card, .editorial-quote-box, .code-mockup-window, .section-header, .estimator-box, .contact-form-card, .contact-info-side, .case-study-content, .case-study-media, .partner-table-cell, .brand-showcase-card, .value-box-card, .stat-summary-item, .venn-svg-wrapper, .ab-test-preview-box, .pipeline-stream-card, .atelier-specimen-card, .pantone-chip-card, .gauge-metric-box, .speed-gauge-wrap, .grid-col-5 > *, .grid-col-4 > *, .grid-col-3 > *, .grid-col-6 > *, .site-footer .footer-brand-col, .site-footer .footer-col'
   );
 
   if ('IntersectionObserver' in window) {
@@ -464,8 +467,8 @@ function initScrollAnimations() {
         }
       });
     }, {
-      rootMargin: '0px 0px -20px 0px',
-      threshold: 0.02
+      rootMargin: '0px 0px -25px 0px',
+      threshold: 0.05
     });
 
     revealTargets.forEach(el => {
@@ -483,7 +486,7 @@ function initScrollAnimations() {
       observer.observe(el);
     });
 
-    // Safety fallback: reveal any element in viewport immediately
+    // Safety fallback: reveal any element in initial viewport immediately
     setTimeout(() => {
       revealTargets.forEach(el => {
         const rect = el.getBoundingClientRect();
@@ -491,44 +494,64 @@ function initScrollAnimations() {
           el.classList.add('revealed');
         }
       });
-    }, 200);
+    }, 150);
   } else {
     // Legacy fallback: show all immediately
     revealTargets.forEach(el => el.classList.add('revealed'));
   }
 
-  // 2. Hero Section Entrance Animation with GSAP
+  // 2. Hero Section Entrance Choreography with GSAP
   if (typeof gsap !== 'undefined') {
-    const heroTitle = document.querySelector('.hero-title');
-    const heroMedia = document.querySelector('.hero-media-showcase');
+    const heroSection = document.querySelector('.hero-section');
 
-    if (heroTitle) {
-      gsap.fromTo('.hero-tag-row',
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', clearProps: 'all' }
-      );
-      gsap.fromTo('.hero-title',
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6, delay: 0.08, ease: 'power2.out', clearProps: 'all' }
-      );
-      gsap.fromTo('.hero-text-content .lead, .hero-text-content p',
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.5, delay: 0.16, ease: 'power2.out', clearProps: 'all' }
-      );
-      gsap.fromTo('.hero-cta-group',
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.5, delay: 0.22, ease: 'power2.out', clearProps: 'all' }
-      );
-      gsap.fromTo('.hero-stats-grid',
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.5, delay: 0.3, ease: 'power2.out', clearProps: 'all' }
-      );
-    }
+    if (heroSection) {
+      const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.6 } });
 
-    if (heroMedia) {
-      gsap.fromTo('.hero-media-showcase',
-        { opacity: 0, scale: 0.97 },
-        { opacity: 1, scale: 1, duration: 0.7, delay: 0.15, ease: 'power2.out', clearProps: 'all' }
+      // Eyebrow badges & live compiler prompts
+      heroTl.fromTo(
+        '.hero-section .eyebrow-label, .hero-section .hero-tech-prompt, .hero-section .cro-trigger-pill, .hero-section .hero-tag-row',
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.45, clearProps: 'all' }
+      );
+
+      // Hero Title
+      heroTl.fromTo(
+        '.hero-section .hero-title',
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.55, clearProps: 'all' },
+        '-=0.25'
+      );
+
+      // Hero Lead & Text
+      heroTl.fromTo(
+        '.hero-section .lead, .hero-section p.lead, .hero-section .hero-text-content > p',
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.5, clearProps: 'all' },
+        '-=0.3'
+      );
+
+      // Hero CTA Buttons
+      heroTl.fromTo(
+        '.hero-section .hero-cta-group, .hero-section .cta-banner-buttons',
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.5, clearProps: 'all' },
+        '-=0.3'
+      );
+
+      // Feature pills & Live stats
+      heroTl.fromTo(
+        '.hero-section .feature-pill, .hero-section .hero-stats-grid, .hero-section .hero-tracking-line',
+        { opacity: 0, y: 12, stagger: 0.05 },
+        { opacity: 1, y: 0, duration: 0.45, clearProps: 'all' },
+        '-=0.25'
+      );
+
+      // Hero Interactive Showcase / Mockup
+      heroTl.fromTo(
+        '.hero-section .code-mockup-window, .hero-section .figma-hero-board, .hero-section .speed-gauge-wrap, .hero-section .gauge-metric-box, .hero-section .ab-test-preview-box, .hero-section .pipeline-stream-card, .hero-section .atelier-specimen-card, .hero-section .hero-workspace-showcase, .hero-section .hero-image-wrapper',
+        { opacity: 0, y: 24, scale: 0.98 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.65, clearProps: 'all' },
+        '-=0.4'
       );
     }
 
@@ -536,7 +559,7 @@ function initScrollAnimations() {
     document.querySelectorAll('.hero-floating-card').forEach(card => {
       gsap.to(card, {
         y: -6,
-        duration: 2.2,
+        duration: 2.4,
         repeat: -1,
         yoyo: true,
         ease: 'sine.inOut'
@@ -547,7 +570,10 @@ function initScrollAnimations() {
     if (typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
 
-      const metricElements = document.querySelectorAll('.stat-number, .metric-item h4');
+      const metricElements = document.querySelectorAll(
+        '.stat-number, .metric-item h4, .gauge-circle-number, .speed-dial-large .score'
+      );
+
       metricElements.forEach(el => {
         const originalText = el.innerText.trim();
         const numMatch = originalText.match(/\d+/);
@@ -558,13 +584,13 @@ function initScrollAnimations() {
 
           ScrollTrigger.create({
             trigger: el,
-            start: 'top 92%',
+            start: 'top 90%',
             once: true,
             onEnter: () => {
               const counterObj = { val: 0 };
               gsap.to(counterObj, {
                 val: targetNum,
-                duration: 1.2,
+                duration: 1.4,
                 ease: 'power2.out',
                 onUpdate: () => {
                   el.innerText = prefix + Math.floor(counterObj.val) + suffix;
@@ -579,6 +605,84 @@ function initScrollAnimations() {
         ScrollTrigger.refresh();
       });
     }
+  }
+}
+
+/* 8b. Performance & Speed Progress Bar Expand on View */
+function initSpeedProgressBars() {
+  const bars = document.querySelectorAll('.speed-bar-fill');
+  if (!bars.length) return;
+
+  bars.forEach(bar => {
+    const rawWidth = bar.style.width || '80%';
+    bar.setAttribute('data-target-width', rawWidth);
+    bar.style.width = '0%';
+  });
+
+  if ('IntersectionObserver' in window) {
+    const barObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const targetWidth = entry.target.getAttribute('data-target-width') || '80%';
+          entry.target.style.width = targetWidth;
+          entry.target.classList.add('animated');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    bars.forEach(bar => barObserver.observe(bar));
+  } else {
+    bars.forEach(bar => {
+      bar.style.width = bar.getAttribute('data-target-width') || '80%';
+    });
+  }
+}
+
+/* 8c. Interactive 3D Perspective Tilt on Cards */
+function initInteractiveCardTilt() {
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const tiltCards = document.querySelectorAll(
+      '.tech-matrix-card, .duo-card, .work-project-card, .atelier-specimen-card, .transformation-pane, .ab-test-preview-box'
+    );
+
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+}
+
+/* 8d. Magnetic Button Physics */
+function initMagneticButtons() {
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const magneticElements = document.querySelectorAll('.btn-lime, .brand-logo-mark');
+
+    magneticElements.forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        el.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) scale(1.02)`;
+      });
+
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = '';
+      });
+    });
   }
 }
 
