@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    KINETIC DUO STUDIO — DESIGN SYSTEM
    Human-crafted, editorial, high-converting e-commerce studio stylesheet
    ========================================================================== */
@@ -7831,3 +7831,295 @@ pre.code-content {
     gap: 8px !important;
   }
 }
+
+/* ==========================================================================
+   CUSTOM DISTINCT SERVICE PAGES DESIGN SYSTEM
+   ========================================================================== */
+
+/* 1. SHOPIFY DEVELOPMENT (Dark Tech / Architecture Aesthetic) */
+.tech-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--accent-lime);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tech-tabs-nav {
+  display: flex;
+  gap: 10px;
+  background: var(--bg-secondary);
+  padding: 8px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tech-tab-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.92rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tech-tab-btn.active,
+.tech-tab-btn:hover {
+  background: var(--bg-card);
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.tech-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.tech-matrix-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.tech-matrix-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-lime);
+  box-shadow: var(--shadow-md);
+}
+
+/* 2. UI/UX DESIGN (Figma Atelier & Design Tokens Aesthetic) */
+.figma-canvas-card {
+  background: #1E1E1E;
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid #333333;
+}
+
+.figma-cursor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 800;
+  position: absolute;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: floatCursor 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatCursor {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.token-swatches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.token-swatch {
+  height: 60px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* 3. STORE REDESIGN (Transformation / Before & After Aesthetic) */
+.transformation-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+@media (max-width: 768px) {
+  .transformation-split-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.transformation-pane {
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+}
+
+.transformation-pane.before {
+  background: #FFF5F5;
+  border: 1px solid #FED7D7;
+}
+
+.transformation-pane.after {
+  background: #F0FDF4;
+  border: 2px solid #22C55E;
+}
+
+[data-theme="dark"] .transformation-pane.before {
+  background: #201313;
+  border-color: #4A1D1D;
+}
+
+[data-theme="dark"] .transformation-pane.after {
+  background: #112217;
+  border-color: #166534;
+}
+
+/* 4. SPEED & PERFORMANCE (Dashboard & Gauge Aesthetic) */
+.gauge-metric-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gauge-circle-number {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 6px solid #22C55E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #22C55E;
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.speed-bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.speed-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* 5. CRO & OPTIMIZATION (Conversion Laboratory Aesthetic) */
+.cro-funnel-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.cro-trigger-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-lime);
+  font-weight: 700;
+  font-size: 0.84rem;
+}
+
+/* 6. ANALYTICS & TRACKING (Data Blueprint & Pipeline Aesthetic) */
+.pipeline-stream-card {
+  background: #0D1117;
+  color: #C9D1D9;
+  border: 1px solid #30363D;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  font-family: var(--font-mono);
+}
+
+.pipeline-node-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.pipeline-node-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 32px;
+  bottom: 0;
+  width: 2px;
+  background: #30363D;
+}
+
+.pipeline-node-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent-lime);
+  color: #0B0B0B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* 7. LOGO & BRAND DESIGN (Luxury Atelier / Specimen Aesthetic) */
+.atelier-specimen-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+}
+
+.pantone-chip-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.pantone-color-block {
+  height: 90px;
+  width: 100%;
+}
+
+.pantone-meta {
+  padding: 10px 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
