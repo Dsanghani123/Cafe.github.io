@@ -7833,8 +7833,187 @@ pre.code-content {
 }
 
 /* ==========================================================================
-   CUSTOM DISTINCT SERVICE PAGES DESIGN SYSTEM
+   CUSTOM DISTINCT SERVICE HERO BANNERS
    ========================================================================== */
+
+/* Hero 1: Tech Terminal Hero (Shopify Dev) */
+.hero-tech-terminal {
+  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.08), transparent 60%), var(--bg-main);
+  position: relative;
+}
+
+.hero-tech-prompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px dashed var(--border-color);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--accent-lime);
+  margin-bottom: 20px;
+}
+
+[data-theme="dark"] .hero-tech-prompt {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hero 2: Figma Atelier Hero (UI/UX Design) */
+.hero-figma-atelier {
+  text-align: center;
+  background: radial-gradient(circle at top center, rgba(13, 153, 255, 0.08), transparent 70%), var(--bg-main);
+  padding-bottom: 60px;
+}
+
+.figma-hero-board {
+  max-width: 960px;
+  margin: 40px auto 0;
+  background: #181818;
+  border-radius: var(--radius-xl);
+  border: 1px solid #333333;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+/* Hero 3: Transformation Split Hero (Store Redesign) */
+.hero-redesign-split {
+  background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-secondary) 100%);
+}
+
+.split-hero-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .split-hero-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.split-hero-card {
+  padding: 24px 20px;
+  border-radius: var(--radius-lg);
+  font-size: 0.88rem;
+}
+
+.split-hero-card.legacy {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.split-hero-card.revamped {
+  background: rgba(34, 197, 94, 0.08);
+  border: 2px solid #22C55E;
+}
+
+/* Hero 4: Speedometer Cockpit Hero (Speed & Performance) */
+.hero-speed-cockpit {
+  text-align: center;
+  background: radial-gradient(circle at top center, rgba(34, 197, 94, 0.1), transparent 70%), var(--bg-main);
+}
+
+.speed-gauge-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.speed-dial-large {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 8px solid #22C55E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  background: rgba(34, 197, 94, 0.08);
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.25);
+}
+
+.speed-dial-large .score {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #22C55E;
+  line-height: 1;
+}
+
+.speed-dial-large .label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+/* Hero 5: CRO Growth Lab Hero (CRO) */
+.hero-cro-lab {
+  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.1), transparent 60%), var(--bg-main);
+}
+
+.ab-test-preview-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 30px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Hero 6: Analytics Blueprint Hero (Data & Tracking) */
+.hero-analytics-stream {
+  background: #090D13;
+  color: #FFFFFF;
+  padding: 70px 0;
+  border-bottom: 1px solid #21262D;
+}
+
+.hero-analytics-stream h1 {
+  color: #FFFFFF !important;
+}
+
+.hero-analytics-stream p.lead {
+  color: #8B949E !important;
+}
+
+.hero-analytics-stream .btn-outline-dark {
+  color: #FFFFFF !important;
+  border-color: #30363D;
+}
+
+.hero-analytics-stream .btn-outline-dark:hover {
+  background: #21262D;
+  border-color: #8B949E;
+}
+
+/* Hero 7: Brand Atelier Luxury Hero (Logo & Brand Design) */
+.hero-brand-luxury {
+  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.08), transparent 70%), var(--bg-main);
+  padding-bottom: 50px;
+}
+
+.brand-monogram-hero-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 36px 30px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 /* 1. SHOPIFY DEVELOPMENT (Dark Tech / Architecture Aesthetic) */
 .tech-hero-badge {
