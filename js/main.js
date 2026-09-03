@@ -87,6 +87,38 @@ function initNavigation() {
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
 
+  // Ensure backdrop overlay element exists
+  let navOverlay = document.querySelector('.nav-overlay');
+  if (!navOverlay) {
+    navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    navOverlay.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(navOverlay);
+  }
+
+  function closeMobileMenu() {
+    if (!navLinks) return;
+    navLinks.classList.remove('active');
+    navOverlay?.classList.remove('active');
+    document.body.classList.remove('nav-open');
+    if (mobileToggle) {
+      mobileToggle.textContent = '☰';
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+    document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+  }
+
+  function openMobileMenu() {
+    if (!navLinks) return;
+    navLinks.classList.add('active');
+    navOverlay?.classList.add('active');
+    document.body.classList.add('nav-open');
+    if (mobileToggle) {
+      mobileToggle.textContent = '✕';
+      mobileToggle.setAttribute('aria-expanded', 'true');
+    }
+  }
+
   // Sticky header shadow on scroll
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
@@ -98,22 +130,27 @@ function initNavigation() {
 
   // Mobile menu toggle
   if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isExpanded = navLinks.classList.contains('active');
-      mobileToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-      mobileToggle.textContent = isExpanded ? '✕' : '☰';
+      if (isExpanded) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
 
-    // Mobile menu dropdown toggle handlers
+    // Mobile menu dropdown toggle handlers (accordion style)
     const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
     dropdownToggles.forEach(toggle => {
       toggle.addEventListener('click', (e) => {
         if (window.innerWidth <= 992) {
           e.preventDefault();
+          e.stopPropagation();
           const parentDropdown = toggle.closest('.nav-dropdown');
           if (parentDropdown) {
             const isOpen = parentDropdown.classList.contains('open');
+            // Close other open accordion items
             document.querySelectorAll('.nav-dropdown.open').forEach(d => {
               if (d !== parentDropdown) d.classList.remove('open');
             });
@@ -126,20 +163,33 @@ function initNavigation() {
     // Close menu when clicking link inside menu (excluding dropdown toggles)
     navLinks.querySelectorAll('a:not(.nav-dropdown-toggle)').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        mobileToggle.textContent = '☰';
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+        closeMobileMenu();
       });
     });
 
-    // Close menu when clicking outside
+    // Close menu when clicking overlay backdrop
+    navOverlay.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+
+    // Close menu when clicking outside header & menu
     document.addEventListener('click', (e) => {
-      if (header && !header.contains(e.target) && navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        mobileToggle.textContent = '☰';
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+      if (header && !header.contains(e.target) && !navOverlay.contains(e.target) && navLinks.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close menu on ESC key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close mobile menu when resized back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 992 && navLinks.classList.contains('active')) {
+        closeMobileMenu();
       }
     });
   }
